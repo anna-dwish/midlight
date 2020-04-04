@@ -57,9 +57,6 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Vjc-OF-bJI" kind="show" id="6D3-hD-V4S"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take back control of your mental health! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ak1-5Q-kes">
                                 <rect key="frame" x="53" y="334" width="308" height="27"/>
@@ -92,17 +89,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="E9B-Ix-LFD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="138"/>
+            <point key="canvasLocation" x="572" y="905"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="K82-c7-HOP">
             <objects>
                 <viewController id="Vjc-OF-bJI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sNF-ee-X1c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brm-UB-a93">
@@ -133,6 +131,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GdQ-n1-2LF" kind="show" id="3m8-qG-dhP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -142,20 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Byk-hs-GoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="138"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="RwV-sp-fFX">
-            <objects>
-                <navigationController id="hRq-mJ-EWN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cn2-2T-hkH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i7X-KO-yeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1730" y="138"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iFj-7c-xed">
@@ -166,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUD-wl-1uH">
-                                <rect key="frame" x="20" y="162" width="180" height="114"/>
+                                <rect key="frame" x="20" y="206" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="fdP-3k-r32"/>
                                     <constraint firstAttribute="height" constant="114" id="zHU-3G-VF8"/>
@@ -176,7 +164,7 @@
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please select the activities you currently do to improve your mood" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8k-mc-EWD">
-                                <rect key="frame" x="67.5" y="74" width="279" height="69"/>
+                                <rect key="frame" x="67.5" y="118" width="279" height="69"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="Gly-YN-Dg0"/>
@@ -187,7 +175,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofN-r8-xJR">
-                                <rect key="frame" x="20" y="296" width="180" height="114"/>
+                                <rect key="frame" x="20" y="340" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="9gr-Xu-O7U"/>
                                     <constraint firstAttribute="height" constant="114" id="abR-Sv-xiv"/>
@@ -197,7 +185,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZY-5T-ELa">
-                                <rect key="frame" x="214" y="295" width="180" height="114"/>
+                                <rect key="frame" x="214" y="339" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="FeG-RF-Nrz"/>
                                     <constraint firstAttribute="height" constant="114" id="NuE-e1-1h9"/>
@@ -207,7 +195,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4T-LJ-3YN">
-                                <rect key="frame" x="20" y="430" width="180" height="114"/>
+                                <rect key="frame" x="20" y="474" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="bHs-oF-uoM"/>
                                     <constraint firstAttribute="height" constant="114" id="o7S-uc-Oc1"/>
@@ -217,7 +205,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-Dm-wto">
-                                <rect key="frame" x="214" y="429" width="180" height="114"/>
+                                <rect key="frame" x="214" y="473" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="fc3-6n-p01"/>
                                     <constraint firstAttribute="width" constant="180" id="sOH-iX-02I"/>
@@ -227,7 +215,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-4m-bce">
-                                <rect key="frame" x="20" y="564" width="180" height="114"/>
+                                <rect key="frame" x="20" y="608" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="mB1-A1-JQ5"/>
                                     <constraint firstAttribute="width" constant="180" id="zKj-H1-vIQ"/>
@@ -237,7 +225,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFU-lC-Lwv">
-                                <rect key="frame" x="214" y="563" width="180" height="114"/>
+                                <rect key="frame" x="214" y="607" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="XZh-ru-qIo"/>
                                     <constraint firstAttribute="height" constant="114" id="jNJ-Yb-RUx"/>
@@ -247,7 +235,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVt-71-zbj">
-                                <rect key="frame" x="20" y="698" width="180" height="114"/>
+                                <rect key="frame" x="20" y="742" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="3LQ-Jk-6xM"/>
                                     <constraint firstAttribute="height" constant="114" id="DVd-Qf-Nr8"/>
@@ -257,7 +245,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04Y-3h-geV">
-                                <rect key="frame" x="214" y="697" width="180" height="114"/>
+                                <rect key="frame" x="214" y="741" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="0K5-p1-5Mg"/>
                                     <constraint firstAttribute="height" constant="114" id="Am8-Ve-a7p"/>
@@ -267,7 +255,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5V-9W-4ha">
-                                <rect key="frame" x="214" y="161" width="180" height="114"/>
+                                <rect key="frame" x="214" y="205" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="2vd-UK-gPZ"/>
                                     <constraint firstAttribute="height" constant="114" id="N5R-8m-54o"/>
@@ -284,6 +272,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BBb-dp-EiF" kind="show" id="zlW-DY-Fa8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -317,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YyY-eq-eoh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2600" y="138"/>
+            <point key="canvasLocation" x="3480" y="138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="W40-BN-OS8">
@@ -328,7 +319,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jD-Mo-XdA">
-                                <rect key="frame" x="20" y="162" width="180" height="114"/>
+                                <rect key="frame" x="20" y="206" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="26D-VF-N2A"/>
                                     <constraint firstAttribute="width" constant="180" id="krW-QL-S2l"/>
@@ -338,7 +329,7 @@
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please select the activities you want to start doing" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JV-cA-Rwp">
-                                <rect key="frame" x="67.5" y="74" width="279" height="69"/>
+                                <rect key="frame" x="67.5" y="118" width="279" height="69"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="joC-oR-aMO"/>
@@ -349,7 +340,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P25-3Y-mqH">
-                                <rect key="frame" x="20" y="296" width="180" height="114"/>
+                                <rect key="frame" x="20" y="340" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="0SV-Ye-GyT"/>
                                     <constraint firstAttribute="height" constant="114" id="xjf-W7-RM8"/>
@@ -359,7 +350,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKQ-Ka-sBR">
-                                <rect key="frame" x="214" y="295" width="180" height="114"/>
+                                <rect key="frame" x="214" y="339" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="5wx-ij-ieY"/>
                                     <constraint firstAttribute="height" constant="114" id="g9b-D0-uU2"/>
@@ -369,7 +360,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D14-KF-zim">
-                                <rect key="frame" x="20" y="430" width="180" height="114"/>
+                                <rect key="frame" x="20" y="474" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="7qe-Fc-6PN"/>
                                     <constraint firstAttribute="width" constant="180" id="gr0-wW-6ce"/>
@@ -379,7 +370,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXg-oM-PQu">
-                                <rect key="frame" x="214" y="429" width="180" height="114"/>
+                                <rect key="frame" x="214" y="473" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="DmD-29-Y4t"/>
                                     <constraint firstAttribute="height" constant="114" id="Lg4-Mr-kFA"/>
@@ -389,7 +380,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1P-Mq-xRX">
-                                <rect key="frame" x="20" y="564" width="180" height="114"/>
+                                <rect key="frame" x="20" y="608" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="DjS-sI-9d2"/>
                                     <constraint firstAttribute="width" constant="180" id="XCb-T4-KhG"/>
@@ -399,7 +390,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSC-h4-PDa">
-                                <rect key="frame" x="214" y="563" width="180" height="114"/>
+                                <rect key="frame" x="214" y="607" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="1Wm-cR-6LW"/>
                                     <constraint firstAttribute="width" constant="180" id="yeD-S4-xbE"/>
@@ -409,7 +400,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-Pp-vJs">
-                                <rect key="frame" x="20" y="698" width="180" height="114"/>
+                                <rect key="frame" x="20" y="742" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="hTO-bu-CP5"/>
                                     <constraint firstAttribute="height" constant="114" id="ueR-yH-Lt1"/>
@@ -419,7 +410,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dar-mo-imG">
-                                <rect key="frame" x="214" y="697" width="180" height="114"/>
+                                <rect key="frame" x="214" y="741" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="IUB-C4-gfW"/>
                                     <constraint firstAttribute="width" constant="180" id="bh2-4a-gU1"/>
@@ -429,7 +420,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nq-hI-RbT">
-                                <rect key="frame" x="214" y="161" width="180" height="114"/>
+                                <rect key="frame" x="214" y="205" width="180" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="JUY-GD-Ebe"/>
                                     <constraint firstAttribute="height" constant="114" id="Yfv-DI-1IU"/>
@@ -446,6 +437,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="t1v-Pd-MT2" kind="show" id="xVl-Bi-3KI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -475,10 +469,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fvk-vO-KpM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ewc-5v-k38"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAQ-tV-Av9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3393" y="138"/>
+            <point key="canvasLocation" x="4284" y="138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="t4S-G1-miJ">
@@ -499,6 +494,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="DL3-k9-rbN" kind="show" id="gG8-7M-TMs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtU-pQ-1IX">
                                 <rect key="frame" x="29" y="415.5" width="65" height="65"/>
@@ -541,7 +539,7 @@
                                 <state key="normal" backgroundImage="highest"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please select the mood you felt the most frequently over the last month" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLX-rg-gWr">
-                                <rect key="frame" x="67.5" y="304" width="279" height="69"/>
+                                <rect key="frame" x="67.5" y="348" width="279" height="69"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="hda-cY-NvX"/>
@@ -575,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f05-rd-AWt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4111.594202898551" y="137.94642857142856"/>
+            <point key="canvasLocation" x="5021.739130434783" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iQL-yM-eTr">
@@ -620,9 +618,6 @@
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="GnI-G8-HIH" kind="show" id="nqn-GS-Caf"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-DY-FAe">
                                 <rect key="frame" x="87" y="319" width="240" height="128"/>
@@ -646,10 +641,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rzt-w3-PTz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3ea-Np-gBo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dak-ea-hGI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4905.7971014492759" y="137.94642857142856"/>
+            <point key="canvasLocation" x="5815.9420289855079" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YpD-BK-AEk">
@@ -719,24 +715,34 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GnI-G8-HIH" kind="show" id="bmO-5C-IkR"/>
+                                    <segue destination="Vjc-OF-bJI" kind="show" id="YLr-wk-oU7"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-3F-5Jx">
+                                <rect key="frame" x="113" y="704" width="191" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <state key="normal" title="Already have an account?">
+                                    <color key="titleColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="td9-fJ-QHU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rPE-yU-5eQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jd-jR-ad3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109" y="905"/>
+            <point key="canvasLocation" x="1823.1884057971015" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9gn-i0-05W">
             <objects>
                 <viewController id="Mf1-oP-fag" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qYi-uz-mYG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iHu-ZE-fHV"/>
@@ -752,7 +758,7 @@
             <objects>
                 <viewController id="IcH-0f-2lK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZCf-fv-Dxa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4x-Pm-QVI">
@@ -827,11 +833,11 @@
             <objects>
                 <viewController id="s9b-5f-wbE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GVa-Do-i7m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaT-TP-vKb">
-                                <rect key="frame" x="29" y="650" width="65" height="65"/>
+                                <rect key="frame" x="29" y="677" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="L82-J1-XyI"/>
                                     <constraint firstAttribute="height" constant="65" id="LQ1-Oi-plE"/>
@@ -839,7 +845,7 @@
                                 <state key="normal" backgroundImage="lowest"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-c0-MO0">
-                                <rect key="frame" x="102" y="650" width="65" height="65"/>
+                                <rect key="frame" x="102" y="677" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="QuX-pq-zlj"/>
                                     <constraint firstAttribute="width" constant="65" id="qAq-Eu-yZA"/>
@@ -847,7 +853,7 @@
                                 <state key="normal" backgroundImage="low"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pa-1Y-zNW">
-                                <rect key="frame" x="174.5" y="650" width="65" height="65"/>
+                                <rect key="frame" x="174.5" y="677" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="4bt-AG-82C"/>
                                     <constraint firstAttribute="height" constant="65" id="bBi-z1-5i3"/>
@@ -855,7 +861,7 @@
                                 <state key="normal" backgroundImage="middle"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YM-7Z-wk4">
-                                <rect key="frame" x="248" y="650" width="65" height="65"/>
+                                <rect key="frame" x="248" y="677" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="6Cp-YK-ete"/>
                                     <constraint firstAttribute="width" constant="65" id="hR5-vN-l1Y"/>
@@ -863,7 +869,7 @@
                                 <state key="normal" backgroundImage="high"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bel-AW-J2K">
-                                <rect key="frame" x="321" y="650" width="65" height="65"/>
+                                <rect key="frame" x="321" y="677" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="TxM-G0-EiH"/>
                                     <constraint firstAttribute="height" constant="65" id="qlE-So-FH0"/>
@@ -949,7 +955,7 @@
             <objects>
                 <viewController id="fcF-9g-zVG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXU-QX-BLG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="oaL-3T-xn4"/>
@@ -966,17 +972,189 @@
             <objects>
                 <viewController id="OHP-57-6aE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sbh-HV-Jvw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-pF-rl3">
+                                <rect key="frame" x="53" y="88" width="308" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYC-IA-aiJ">
+                                <rect key="frame" x="53" y="320" width="308" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I like to ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72O-ca-PrU">
+                                <rect key="frame" x="135" y="401" width="145" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01K-pD-1Dn">
+                                <rect key="frame" x="20" y="436" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-CG-Ppd">
+                                <rect key="frame" x="20" y="520" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to do more ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d0-Qg-rk5">
+                                <rect key="frame" x="78" y="571" width="259" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5X-Em-83g">
+                                <rect key="frame" x="87" y="190" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYn-XR-h7X">
+                                <rect key="frame" x="20" y="477" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uck-5h-gaY">
+                                <rect key="frame" x="159" y="435" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70P-8R-Rh2">
+                                <rect key="frame" x="159" y="519" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecr-Ew-foV">
+                                <rect key="frame" x="159" y="476" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-7Z-8Wq">
+                                <rect key="frame" x="288" y="435" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-Fd-3fK">
+                                <rect key="frame" x="288" y="519" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HX-dF-AgR">
+                                <rect key="frame" x="288" y="476" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3p-pR-K5J">
+                                <rect key="frame" x="25" y="608" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keE-lk-evs">
+                                <rect key="frame" x="25" y="692" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-mB-dP2">
+                                <rect key="frame" x="25" y="649" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1Q-F2-wht">
+                                <rect key="frame" x="164" y="607" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgD-7e-70Z">
+                                <rect key="frame" x="164" y="691" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl0-D7-UJG">
+                                <rect key="frame" x="164" y="648" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0M-m8-iJK">
+                                <rect key="frame" x="293" y="607" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3O-xW-Mxh">
+                                <rect key="frame" x="293" y="691" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmd-cf-Kri">
+                                <rect key="frame" x="293" y="648" width="97" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-tl-TMj">
+                                <rect key="frame" x="144" y="759" width="137" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <state key="normal" title="Update Info">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Ji-Rq-p9E" kind="show" id="QXH-pg-6Y7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BkN-Ov-zME"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person" id="Wcf-Le-uAj"/>
+                    <navigationItem key="navigationItem" id="qSz-qe-n52"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhf-PE-6br" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4025" y="2004"/>
+            <point key="canvasLocation" x="4934.7826086956529" y="2003.5714285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cyB-Mw-Nck">
@@ -998,12 +1176,262 @@
                         <segue destination="Mf1-oP-fag" kind="relationship" relationship="viewControllers" id="9CA-b7-HFQ"/>
                         <segue destination="s9b-5f-wbE" kind="relationship" relationship="viewControllers" id="4M4-W2-Fdp"/>
                         <segue destination="fcF-9g-zVG" kind="relationship" relationship="viewControllers" id="gs5-h4-Mhy"/>
-                        <segue destination="OHP-57-6aE" kind="relationship" relationship="viewControllers" id="Kgp-Cs-JG6"/>
+                        <segue destination="cRq-h4-Arl" kind="relationship" relationship="viewControllers" id="Kgp-Cs-JG6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4t-g9-ZZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2599" y="905"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xvW-Qd-i5w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nnd-0r-hJn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vg7-hN-ayi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DbN-QS-vHE" kind="relationship" relationship="rootViewController" id="8HO-ut-59C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gha-5r-JUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913.04347826086962" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OjN-B3-w5j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cRq-h4-Arl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person" id="Wcf-Le-uAj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="94t-dT-G7b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OHP-57-6aE" kind="relationship" relationship="rootViewController" id="kxf-wZ-wW3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIy-q3-yyn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4024.6376811594205" y="2003.5714285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jbf-vh-Rqk">
+            <objects>
+                <viewController id="2Ji-Rq-p9E" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MPt-4v-PN0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEf-wg-sPI">
+                                <rect key="frame" x="20" y="177" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cooking/Baking" image="cook">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGY-3r-ppV">
+                                <rect key="frame" x="20" y="299" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Playing with Pets" image="pets">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmP-1y-iCW">
+                                <rect key="frame" x="214" y="299" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Creating art" image="paint">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPI-8u-2p7">
+                                <rect key="frame" x="20" y="421" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exercise" image="exercise">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6T-Kh-ger">
+                                <rect key="frame" x="214" y="421" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Watching media" image="tv">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSe-fG-ECL">
+                                <rect key="frame" x="20" y="529" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Being in nature" image="nature">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbe-im-kBs">
+                                <rect key="frame" x="214" y="529" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Journaling" image="draw">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzh-f4-NZw">
+                                <rect key="frame" x="20" y="631" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Talking" image="talk">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bne-cZ-xat">
+                                <rect key="frame" x="214" y="631" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Other" image="ellipsis">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsD-6p-a8j">
+                                <rect key="frame" x="214" y="177" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reading" image="read">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m90-8V-GJH">
+                                <rect key="frame" x="139" y="736" width="137" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ahg-J2-Ggv" kind="show" id="o8G-lv-bw4"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please select the activities you currently do to improve your mood" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-aT-Jhw">
+                                <rect key="frame" x="68" y="100" width="279" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nR0-2w-DQD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IlZ-ib-xC3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8l-Qj-xDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4934.7826086956529" y="2706.6964285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oDB-iz-MZr">
+            <objects>
+                <viewController id="ahg-J2-Ggv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJZ-BP-wUu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zh-7g-gKN">
+                                <rect key="frame" x="20" y="177" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cooking/Baking" image="cook">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP9-Tc-QF6">
+                                <rect key="frame" x="20" y="299" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Playing with Pets" image="pets">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZa-9z-UR5">
+                                <rect key="frame" x="214" y="299" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Creating art" image="paint">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-Ih-Tvt">
+                                <rect key="frame" x="20" y="421" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exercise" image="exercise">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca0-Bz-4aB">
+                                <rect key="frame" x="214" y="421" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Watching media" image="tv">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXC-n3-g0W">
+                                <rect key="frame" x="20" y="529" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Being in nature" image="nature">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kv-Fe-Ofn">
+                                <rect key="frame" x="214" y="529" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Journaling" image="draw">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNB-06-fTv">
+                                <rect key="frame" x="20" y="631" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Talking" image="talk">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMn-Jc-t5I">
+                                <rect key="frame" x="214" y="631" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Other" image="ellipsis">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox6-Pn-NsC">
+                                <rect key="frame" x="214" y="177" width="180" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reading" image="read">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqq-jU-oxL">
+                                <rect key="frame" x="139" y="736" width="137" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please select the activities you want to start doing" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw9-OK-LCn">
+                                <rect key="frame" x="68" y="100" width="279" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Oo6-s1-PfQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yjS-6s-EeG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTE-Hz-x8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5678" y="2707"/>
         </scene>
     </scenes>
     <resources>
@@ -1029,7 +1457,4 @@
         <image name="talk" width="32" height="32"/>
         <image name="tv" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="nqn-GS-Caf"/>
-    </inferredMetricsTieBreakers>
 </document>
