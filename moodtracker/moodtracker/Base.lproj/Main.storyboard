@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -666,6 +667,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dak-ea-hGI" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5815.9420289855079" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BO2-Fd-cFC">
+            <objects>
+                <viewController id="M3y-3p-zy5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mjk-Ag-The">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cVd-bJ-bik" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="41" y="119" width="331" height="307"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="307" id="MGQ-r9-Zvv"/>
+                                    <constraint firstAttribute="width" constant="331" id="Pea-1H-HeV"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iGz-hc-hoX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="kiN-rX-Uly">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TFQ-dd-0rc">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyy-Ls-ZuQ">
+                                                    <rect key="frame" x="43" y="54" width="42" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="2E8-89-ReS"/>
+                                                        <constraint firstAttribute="height" constant="20.5" id="zy9-Gi-5rf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Nyy-Ls-ZuQ" firstAttribute="centerX" secondItem="TFQ-dd-0rc" secondAttribute="centerX" id="5oZ-he-LwP"/>
+                                                <constraint firstItem="Nyy-Ls-ZuQ" firstAttribute="centerY" secondItem="TFQ-dd-0rc" secondAttribute="centerY" id="b7e-5d-1SE"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cVd-bJ-bik" firstAttribute="top" secondItem="bxV-Zu-I4u" secondAttribute="top" constant="75" id="M4w-Ah-9aM"/>
+                            <constraint firstItem="cVd-bJ-bik" firstAttribute="leading" secondItem="bxV-Zu-I4u" secondAttribute="leading" constant="41" id="jXz-8y-GiP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bxV-Zu-I4u"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvJ-26-qJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6465.217391304348" y="967.63392857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YpD-BK-AEk">

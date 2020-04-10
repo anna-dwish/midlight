@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,12 @@
 		07903BC124230A22004238A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07903BC024230A22004238A0 /* Assets.xcassets */; };
 		07903BC424230A22004238A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07903BC224230A22004238A0 /* LaunchScreen.storyboard */; };
 		07903BCC242658D2004238A0 /* media in Resources */ = {isa = PBXBuildFile; fileRef = 07903BCB242658D1004238A0 /* media */; };
+		07C4AE11243FF2C5007C2C4B /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C4AE10243FF2C5007C2C4B /* DateCell.swift */; };
+		3EA0F5F055125AD5E44C77A6 /* Pods_moodtracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E415D65E346C35E4CF7A9 /* Pods_moodtracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		039379169CC4A5E3A84B23CB /* Pods-moodtracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moodtracker.release.xcconfig"; path = "Target Support Files/Pods-moodtracker/Pods-moodtracker.release.xcconfig"; sourceTree = "<group>"; };
 		07903BB424230A1D004238A0 /* moodtracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodtracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07903BB724230A1D004238A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07903BB924230A1D004238A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		07903BC324230A22004238A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07903BC524230A22004238A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07903BCB242658D1004238A0 /* media */ = {isa = PBXFileReference; lastKnownFileType = folder; name = media; path = ../../../media; sourceTree = "<group>"; };
+		07C4AE10243FF2C5007C2C4B /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		3353B9A2FA7F363697A8721C /* Pods-moodtracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moodtracker.debug.xcconfig"; path = "Target Support Files/Pods-moodtracker/Pods-moodtracker.debug.xcconfig"; sourceTree = "<group>"; };
+		6B0E415D65E346C35E4CF7A9 /* Pods_moodtracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moodtracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA0F5F055125AD5E44C77A6 /* Pods_moodtracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				07903BB624230A1D004238A0 /* moodtracker */,
 				07903BB524230A1D004238A0 /* Products */,
+				17B3733CFAE1D8061D2800BB /* Pods */,
+				688F598DF9496074B5F99E2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +75,26 @@
 				07903BC024230A22004238A0 /* Assets.xcassets */,
 				07903BC224230A22004238A0 /* LaunchScreen.storyboard */,
 				07903BC524230A22004238A0 /* Info.plist */,
+				07C4AE10243FF2C5007C2C4B /* DateCell.swift */,
 			);
 			path = moodtracker;
+			sourceTree = "<group>";
+		};
+		17B3733CFAE1D8061D2800BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3353B9A2FA7F363697A8721C /* Pods-moodtracker.debug.xcconfig */,
+				039379169CC4A5E3A84B23CB /* Pods-moodtracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		688F598DF9496074B5F99E2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B0E415D65E346C35E4CF7A9 /* Pods_moodtracker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07903BC824230A22004238A0 /* Build configuration list for PBXNativeTarget "moodtracker" */;
 			buildPhases = (
+				1296433B97C04CF9FABF4015 /* [CP] Check Pods Manifest.lock */,
 				07903BB024230A1D004238A0 /* Sources */,
 				07903BB124230A1D004238A0 /* Frameworks */,
 				07903BB224230A1D004238A0 /* Resources */,
+				BD74970D29B445CC1DEC1E75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +166,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1296433B97C04CF9FABF4015 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moodtracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD74970D29B445CC1DEC1E75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moodtracker/Pods-moodtracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moodtracker/Pods-moodtracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moodtracker/Pods-moodtracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07903BB024230A1D004238A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,6 +216,7 @@
 				07903BBC24230A1D004238A0 /* ViewController.swift in Sources */,
 				07903BB824230A1D004238A0 /* AppDelegate.swift in Sources */,
 				07903BBA24230A1D004238A0 /* SceneDelegate.swift in Sources */,
+				07C4AE11243FF2C5007C2C4B /* DateCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +358,7 @@
 		};
 		07903BC924230A22004238A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3353B9A2FA7F363697A8721C /* Pods-moodtracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +376,7 @@
 		};
 		07903BCA24230A22004238A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039379169CC4A5E3A84B23CB /* Pods-moodtracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
