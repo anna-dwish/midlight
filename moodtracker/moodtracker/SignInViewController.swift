@@ -23,15 +23,6 @@ class SignInViewController: UIViewController {
         signin.addTarget(self, action: #selector(enableSignIn), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
-
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-      }
-      
-    }
     
     @objc func enableSignIn(){
         if (username.text?.isEmpty ?? true || password.text?.isEmpty ?? true) {
@@ -43,10 +34,8 @@ class SignInViewController: UIViewController {
     }
         
     func validateSignIn(){
-        print("hi")
         Auth.auth().signIn(withEmail: username.text!, password: password.text!) { [weak self] authResult, error in
-        if error != nil {
-            print("hi2")
+        if let error = error {
             self?.signinAid.textColor = UIColor.black
             self?.signinAid.text = "Invalid Login"
             return
