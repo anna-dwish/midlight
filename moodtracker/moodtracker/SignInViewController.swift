@@ -39,12 +39,20 @@ class SignInViewController: UIViewController {
             signinAid.text = "Please enter both fields"
             return
         }
-        else {
-        self.performSegue(withIdentifier: "signUserIn", sender: self)
-        }
-//        Auth.auth().signIn(withEmail: email, password: password)
-//        print("hello")
+        validateSignIn()
+    }
         
+    func validateSignIn(){
+        print("hi")
+        Auth.auth().signIn(withEmail: username.text!, password: password.text!) { [weak self] authResult, error in
+        if error != nil {
+            print("hi2")
+            self?.signinAid.textColor = UIColor.black
+            self?.signinAid.text = "Invalid Login"
+            return
+        }
+        self?.performSegue(withIdentifier: "signUserIn", sender: self)
+      }
     }
 
 
