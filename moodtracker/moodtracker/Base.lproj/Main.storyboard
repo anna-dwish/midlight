@@ -8,12 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xx6-yC-xcV">
@@ -66,18 +66,15 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="GnI-G8-HIH" kind="show" id="JtP-fP-e5N"/>
-                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take back control of your mental health! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ak1-5Q-kes">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ak1-5Q-kes">
                                 <rect key="frame" x="17" y="348" width="380" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="380" id="3tg-kl-NIO"/>
                                     <constraint firstAttribute="height" constant="33" id="7jK-9w-JQT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus" translatesAutoresizingMaskIntoConstraints="NO" id="F1a-Wv-sWT">
@@ -147,10 +144,17 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="E9B-Ix-LFD"/>
+                    <connections>
+                        <outlet property="password" destination="2vd-T5-ede" id="fKl-HP-7OQ"/>
+                        <outlet property="signin" destination="Hiz-Ib-aYd" id="kUT-8D-hHA"/>
+                        <outlet property="signinAid" destination="Ak1-5Q-kes" id="5eG-7E-rsk"/>
+                        <outlet property="username" destination="Xx6-yC-xcV" id="aoA-X5-pF2"/>
+                        <segue destination="GnI-G8-HIH" kind="show" identifier="signUserIn" id="sZH-Xb-MZB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703" y="905"/>
+            <point key="canvasLocation" x="765" y="855"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="K82-c7-HOP">
