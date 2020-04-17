@@ -16,6 +16,7 @@
 		07903BCC242658D2004238A0 /* media in Resources */ = {isa = PBXBuildFile; fileRef = 07903BCB242658D1004238A0 /* media */; };
 		07C4AE11243FF2C5007C2C4B /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C4AE10243FF2C5007C2C4B /* DateCell.swift */; };
 		07E25E2C244027510093F184 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E25E2B244027510093F184 /* CalendarViewController.swift */; };
+		07F1D2C0244A4C0300A9CBAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */; };
 		3EA0F5F055125AD5E44C77A6 /* Pods_moodtracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E415D65E346C35E4CF7A9 /* Pods_moodtracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		07903BCB242658D1004238A0 /* media */ = {isa = PBXFileReference; lastKnownFileType = folder; name = media; path = ../../../media; sourceTree = "<group>"; };
 		07C4AE10243FF2C5007C2C4B /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		07E25E2B244027510093F184 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3353B9A2FA7F363697A8721C /* Pods-moodtracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moodtracker.debug.xcconfig"; path = "Target Support Files/Pods-moodtracker/Pods-moodtracker.debug.xcconfig"; sourceTree = "<group>"; };
 		6B0E415D65E346C35E4CF7A9 /* Pods_moodtracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moodtracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				07903BC024230A22004238A0 /* Assets.xcassets */,
 				07903BC224230A22004238A0 /* LaunchScreen.storyboard */,
 				07903BC524230A22004238A0 /* Info.plist */,
+				07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */,
 				07C4AE10243FF2C5007C2C4B /* DateCell.swift */,
 				07E25E2B244027510093F184 /* CalendarViewController.swift */,
 			);
@@ -162,6 +165,7 @@
 			files = (
 				07903BC424230A22004238A0 /* LaunchScreen.storyboard in Resources */,
 				07903BCC242658D2004238A0 /* media in Resources */,
+				07F1D2C0244A4C0300A9CBAB /* GoogleService-Info.plist in Resources */,
 				07903BC124230A22004238A0 /* Assets.xcassets in Resources */,
 				07903BBF24230A1D004238A0 /* Main.storyboard in Resources */,
 			);
