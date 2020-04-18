@@ -41,8 +41,9 @@ class HomeVC: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let today = formatter.string(from: Date())
-        db.collection(userID!).document(today).setData([
-            "mood": selectedMood
+        db.collection(userID!).document(today).updateData([
+            "mood": selectedMood,
+            "activities": [String]()
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")

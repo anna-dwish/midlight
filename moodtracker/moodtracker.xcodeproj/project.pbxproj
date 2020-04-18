@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0725CD04244BA5200071F3CD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725CD03244BA5200071F3CD /* HomeVC.swift */; };
+		0725CD06244BB0C30071F3CD /* DetailedMoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */; };
+		0777191D244BC3070084AA49 /* DailyActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */; };
 		07903BB824230A1D004238A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BB724230A1D004238A0 /* AppDelegate.swift */; };
 		07903BBA24230A1D004238A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BB924230A1D004238A0 /* SceneDelegate.swift */; };
 		07903BBC24230A1D004238A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BBB24230A1D004238A0 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		039379169CC4A5E3A84B23CB /* Pods-moodtracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moodtracker.release.xcconfig"; path = "Target Support Files/Pods-moodtracker/Pods-moodtracker.release.xcconfig"; sourceTree = "<group>"; };
 		0725CD03244BA5200071F3CD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMoodVC.swift; sourceTree = "<group>"; };
+		0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitiesVC.swift; sourceTree = "<group>"; };
 		07903BB424230A1D004238A0 /* moodtracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodtracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07903BB724230A1D004238A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07903BB924230A1D004238A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				07903BB924230A1D004238A0 /* SceneDelegate.swift */,
 				07903BBB24230A1D004238A0 /* ViewController.swift */,
 				07903BBD24230A1D004238A0 /* Main.storyboard */,
+				0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */,
+				0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */,
 				0725CD03244BA5200071F3CD /* HomeVC.swift */,
 				07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */,
 				07BEFFD0244AA1060079F333 /* MoodVC.swift */,
@@ -342,6 +348,7 @@
 				07BEFFCB244A60C60079F333 /* CreateAccountVC.swift in Sources */,
 				0725CD04244BA5200071F3CD /* HomeVC.swift in Sources */,
 				07E25E2C244027510093F184 /* CalendarViewController.swift in Sources */,
+				0777191D244BC3070084AA49 /* DailyActivitiesVC.swift in Sources */,
 				07BEFFD5244AA8BB0079F333 /* ProfileCreatorVC.swift in Sources */,
 				07BEFFCF244A98860079F333 /* NewActivitiesVC.swift in Sources */,
 				07BEFFD9244AC0C70079F333 /* ProfileVC.swift in Sources */,
@@ -351,6 +358,7 @@
 				07BEFFD7244AAF160079F333 /* WelcomeQuestionnaireVC.swift in Sources */,
 				07903BB824230A1D004238A0 /* AppDelegate.swift in Sources */,
 				07BEFFCD244A812E0079F333 /* CurrentActivitiesVC.swift in Sources */,
+				0725CD06244BB0C30071F3CD /* DetailedMoodVC.swift in Sources */,
 				07903BBA24230A1D004238A0 /* SceneDelegate.swift in Sources */,
 				07C4AE11243FF2C5007C2C4B /* DateCell.swift in Sources */,
 			);
