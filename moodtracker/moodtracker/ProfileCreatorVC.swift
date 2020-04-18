@@ -16,6 +16,7 @@ class ProfileCreatorVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func createProfile()
@@ -38,21 +39,19 @@ class ProfileCreatorVC: UIViewController {
     }
     
     func updateDatabase(){
-        print(Auth.auth().currentUser?.displayName as Any)
-        print("database updated!!!")
-//        let db = Firestore.firestore()
-//        var ref: DocumentReference? = nil
-//        ref = db.collection("moods").addDocument(data: [
-//                "date": "04-16-20",
-//                "mood": "happy"
-//        ]) { err in
-//            if let err = err {
-//                print("Error adding document: \(err)")
-//            } else {
-//                print("Document added with ID: \(ref!.documentID)")
-//            }
-//        }
-//        performSegue(withIdentifier:"moodToProfile",sender:self)
+        let db = Firestore.firestore()
+        let userID = Auth.auth().currentUser?.uid
+        db.collection(userID!).document("profile").setData([
+            "mood": mood,
+            "currentActivities": Array(currentActivities),
+            "newActivities": Array(newActivities)
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
     }
 
 

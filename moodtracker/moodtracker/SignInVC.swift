@@ -20,11 +20,9 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        signin.addTarget(self, action: #selector(enableSignIn), for: .touchUpInside)
-        // Do any additional setup after loading the view.
     }
     
-    @objc func enableSignIn(){
+    @IBAction func enableSignIn(){
         if (username.text?.isEmpty ?? true || password.text?.isEmpty ?? true) {
             signinAid.textColor = UIColor.black
             signinAid.text = "Please enter both fields"
