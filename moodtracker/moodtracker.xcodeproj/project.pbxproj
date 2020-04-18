@@ -18,6 +18,9 @@
 		07BEFFCB244A60C60079F333 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFCA244A60C60079F333 /* CreateAccountVC.swift */; };
 		07BEFFCD244A812E0079F333 /* CurrentActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFCC244A812E0079F333 /* CurrentActivitiesVC.swift */; };
 		07BEFFCF244A98860079F333 /* NewActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFCE244A98860079F333 /* NewActivitiesVC.swift */; };
+		07BEFFD1244AA1060079F333 /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFD0244AA1060079F333 /* MoodVC.swift */; };
+		07BEFFD5244AA8BB0079F333 /* ProfileCreatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFD4244AA8BB0079F333 /* ProfileCreatorVC.swift */; };
+		07BEFFD7244AAF160079F333 /* WelcomeQuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */; };
 		07C4AE11243FF2C5007C2C4B /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C4AE10243FF2C5007C2C4B /* DateCell.swift */; };
 		07E25E2C244027510093F184 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E25E2B244027510093F184 /* CalendarViewController.swift */; };
 		07F1D2C0244A4C0300A9CBAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */; };
@@ -39,6 +42,9 @@
 		07BEFFCA244A60C60079F333 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		07BEFFCC244A812E0079F333 /* CurrentActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentActivitiesVC.swift; sourceTree = "<group>"; };
 		07BEFFCE244A98860079F333 /* NewActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivitiesVC.swift; sourceTree = "<group>"; };
+		07BEFFD0244AA1060079F333 /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
+		07BEFFD4244AA8BB0079F333 /* ProfileCreatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreatorVC.swift; sourceTree = "<group>"; };
+		07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeQuestionnaireVC.swift; sourceTree = "<group>"; };
 		07C4AE10243FF2C5007C2C4B /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		07E25E2B244027510093F184 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -83,6 +89,8 @@
 				07903BB924230A1D004238A0 /* SceneDelegate.swift */,
 				07903BBB24230A1D004238A0 /* ViewController.swift */,
 				07903BBD24230A1D004238A0 /* Main.storyboard */,
+				07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */,
+				07BEFFD0244AA1060079F333 /* MoodVC.swift */,
 				07BEFFCC244A812E0079F333 /* CurrentActivitiesVC.swift */,
 				07BEFFCE244A98860079F333 /* NewActivitiesVC.swift */,
 				07BEFFCA244A60C60079F333 /* CreateAccountVC.swift */,
@@ -94,6 +102,7 @@
 				07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */,
 				07C4AE10243FF2C5007C2C4B /* DateCell.swift */,
 				07E25E2B244027510093F184 /* CalendarViewController.swift */,
+				07BEFFD4244AA8BB0079F333 /* ProfileCreatorVC.swift */,
 			);
 			path = moodtracker;
 			sourceTree = "<group>";
@@ -234,9 +243,12 @@
 			files = (
 				07BEFFCB244A60C60079F333 /* CreateAccountVC.swift in Sources */,
 				07E25E2C244027510093F184 /* CalendarViewController.swift in Sources */,
+				07BEFFD5244AA8BB0079F333 /* ProfileCreatorVC.swift in Sources */,
 				07BEFFCF244A98860079F333 /* NewActivitiesVC.swift in Sources */,
 				07903BBC24230A1D004238A0 /* ViewController.swift in Sources */,
 				07BEFFC9244A50700079F333 /* SignInVC.swift in Sources */,
+				07BEFFD1244AA1060079F333 /* MoodVC.swift in Sources */,
+				07BEFFD7244AAF160079F333 /* WelcomeQuestionnaireVC.swift in Sources */,
 				07903BB824230A1D004238A0 /* AppDelegate.swift in Sources */,
 				07BEFFCD244A812E0079F333 /* CurrentActivitiesVC.swift in Sources */,
 				07903BBA24230A1D004238A0 /* SceneDelegate.swift in Sources */,

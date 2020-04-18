@@ -26,7 +26,7 @@ class CreateAccountVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @objc func enableAccount(){
+    @IBAction func enableAccount(){
         if (email.text?.isEmpty ?? true || password.text?.isEmpty ?? true || confirmPassword.text?.isEmpty ?? true) {
             createAccountAid.textColor = UIColor.black
             createAccountAid.text = "Please complete all fields"
@@ -40,17 +40,24 @@ class CreateAccountVC: UIViewController {
         validateAccount()
     }
         
-    func validateAccount(){
+    func validateAccount() {
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { [weak self] authResult, error in
         if error != nil {
             self?.createAccountAid.textColor = UIColor.black
             self?.createAccountAid.text = "Please use a different email"
             return
         }
-        Auth.auth().signIn(withEmail: (self?.email.text!)!, password: (self?.password.text!)!)
-        self?.performSegue(withIdentifier: "beginQuestionnaire", sender: self)
+            Auth.auth().signIn(withEmail: (self?.email.text)!, password: (self?.password.text)!)
+            self?.performSegue(withIdentifier: "beginQuestionnaire", sender: self)
       }
         
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?){
+//        let vc = segue.destination as! WelcomeQuestionnaire
+//        vc.email = email.text!
+//        vc.password = password.text!
+
     }
 
 }
