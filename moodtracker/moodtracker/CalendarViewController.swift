@@ -16,7 +16,6 @@ class CalendarViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
 }
 
 extension CalendarViewController: JTACMonthViewDataSource {

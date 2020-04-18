@@ -1406,7 +1406,7 @@
         <!--Home-->
         <scene sceneID="aQx-uH-d4r">
             <objects>
-                <viewController id="s9b-5f-wbE" sceneMemberID="viewController">
+                <viewController id="s9b-5f-wbE" customClass="HomeVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GVa-Do-i7m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1418,6 +1418,9 @@
                                     <constraint firstAttribute="height" constant="65" id="LQ1-Oi-plE"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="lowest"/>
+                                <connections>
+                                    <action selector="setMood:" destination="s9b-5f-wbE" eventType="touchUpInside" id="d16-9s-aTj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-c0-MO0">
                                 <rect key="frame" x="102" y="658.5" width="65" height="65"/>
@@ -1426,6 +1429,9 @@
                                     <constraint firstAttribute="width" constant="65" id="qAq-Eu-yZA"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="low"/>
+                                <connections>
+                                    <action selector="setMood:" destination="s9b-5f-wbE" eventType="touchUpInside" id="vhr-Fg-jWS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pa-1Y-zNW">
                                 <rect key="frame" x="174.5" y="658.5" width="65" height="65"/>
@@ -1434,6 +1440,9 @@
                                     <constraint firstAttribute="height" constant="65" id="bBi-z1-5i3"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="middle"/>
+                                <connections>
+                                    <action selector="setMood:" destination="s9b-5f-wbE" eventType="touchUpInside" id="Pma-ve-LRq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YM-7Z-wk4">
                                 <rect key="frame" x="248" y="658.5" width="65" height="65"/>
@@ -1442,6 +1451,9 @@
                                     <constraint firstAttribute="width" constant="65" id="hR5-vN-l1Y"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="high"/>
+                                <connections>
+                                    <action selector="setMood:" destination="s9b-5f-wbE" eventType="touchUpInside" id="a1R-rm-DMI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bel-AW-J2K">
                                 <rect key="frame" x="321" y="658.5" width="65" height="65"/>
@@ -1450,6 +1462,9 @@
                                     <constraint firstAttribute="height" constant="65" id="qlE-So-FH0"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="highest"/>
+                                <connections>
+                                    <action selector="setMood:" destination="s9b-5f-wbE" eventType="touchUpInside" id="eC5-79-oUI"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Enter Today's Mood:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXn-bv-Oqt">
                                 <rect key="frame" x="67.5" y="582" width="279" height="55"/>
@@ -1472,7 +1487,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHM-IV-JWK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHM-IV-JWK" customClass="Ho">
                                 <rect key="frame" x="29" y="191" width="109" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="hZB-NX-Tax"/>
@@ -1538,6 +1553,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="sdE-9L-bxp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="moodFive" destination="bel-AW-J2K" id="oDU-F5-BbL"/>
+                        <outlet property="moodFour" destination="8YM-7Z-wk4" id="gNh-FN-Eyr"/>
+                        <outlet property="moodOne" destination="aaT-TP-vKb" id="SL6-tb-pLY"/>
+                        <outlet property="moodThree" destination="2pa-1Y-zNW" id="KWk-tu-ahV"/>
+                        <outlet property="moodTwo" destination="a0l-c0-MO0" id="neZ-jM-NrU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akQ-aO-dVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
