@@ -53,11 +53,4 @@ class CreateAccountVC: UIViewController {
         
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender:Any?){
-//        let vc = segue.destination as! WelcomeQuestionnaire
-//        vc.email = email.text!
-//        vc.password = password.text!
-
-    }
-
 }

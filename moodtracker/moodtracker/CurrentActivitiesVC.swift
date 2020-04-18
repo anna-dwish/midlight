@@ -27,8 +27,6 @@ class CurrentActivitiesVC: UIViewController {
     let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
     
     var selectedActivities = Set<String>()
-    var email = ""
-    var password = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +51,6 @@ class CurrentActivitiesVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender:Any?){
         let vc = segue.destination as! NewActivitiesVC
         vc.currentActivities = selectedActivities
-        vc.email = email
-        vc.password = password
         
     }
     

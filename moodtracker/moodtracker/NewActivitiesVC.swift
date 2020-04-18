@@ -27,8 +27,6 @@ class NewActivitiesVC: UIViewController {
     
     var selectedActivities = Set<String>()
     var currentActivities = Set<String>()
-    var email = ""
-    var password = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +62,6 @@ class NewActivitiesVC: UIViewController {
         let vc = segue.destination as! MoodVC
         vc.currentActivities = currentActivities
         vc.newActivities = selectedActivities
-        vc.email = email
-        vc.password = password
         
     }
 }

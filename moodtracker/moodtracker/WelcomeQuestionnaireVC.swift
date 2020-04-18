@@ -11,8 +11,6 @@ import UIKit
 class WelcomeQuestionnaire: UIViewController {
 
     @IBOutlet weak var nextQuestion: UIButton!
-    var email = ""
-    var password = ""
     
     
     override func viewDidLoad() {
@@ -23,13 +21,6 @@ class WelcomeQuestionnaire: UIViewController {
     @IBAction func goToNextQuestion()
     {
         performSegue(withIdentifier:"welcomeToCurrent",sender:self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender:Any?){
-        let vc = segue.destination as! CurrentActivitiesVC
-        vc.email = email
-        vc.password = password
-//        vc.currentActivities = selectedActivities
     }
 
 

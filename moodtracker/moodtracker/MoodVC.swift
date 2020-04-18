@@ -18,8 +18,6 @@ class MoodVC: UIViewController {
     
     var newActivities = Set<String>()
     var currentActivities = Set<String>()
-    var email = ""
-    var password = ""
     
     var moods = [UIButton]()
     var selectedMood = 0
@@ -56,8 +54,6 @@ class MoodVC: UIViewController {
         vc.currentActivities = currentActivities
         vc.newActivities = newActivities
         vc.mood = selectedMood
-        vc.email = email
-        vc.password = password
     }
 
 

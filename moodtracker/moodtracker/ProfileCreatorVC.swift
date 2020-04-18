@@ -9,8 +9,6 @@ class ProfileCreatorVC: UIViewController {
     var newActivities = Set<String>()
     var currentActivities = Set<String>()
     var mood = 0
-    var email = ""
-    var password = ""
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var finishProfile: UIButton!
