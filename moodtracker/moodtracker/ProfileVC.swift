@@ -18,7 +18,25 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var moodFour: UIButton!
     @IBOutlet weak var moodFive: UIButton!
     
+    
+    @IBOutlet weak var actOne: UIImageView!
+    @IBOutlet weak var actTwo: UIImageView!
+    @IBOutlet weak var actThree: UIImageView!
+    @IBOutlet weak var actFour: UIImageView!
+    @IBOutlet weak var actFive: UIImageView!
+    @IBOutlet weak var actSix: UIImageView!
+    @IBOutlet weak var actSeven: UIImageView!
+    @IBOutlet weak var actEight: UIImageView!
+    @IBOutlet weak var actNine: UIImageView!
+    @IBOutlet weak var actTen: UIImageView!
+    
     var moods = [UIButton]()
+    var acts = [UIImageView]()
+    let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
+    "Playing with Pets":"pets","Creating art":"paint",
+    "Exercise":"exercise","Watching media":"tv",
+    "Being in nature":"nature","Journaling":"journalbook",
+    "Talking":"talk","Other":"ellipsis"]
     
     let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
     
@@ -27,10 +45,12 @@ class ProfileVC: UIViewController {
         Auth.auth().signIn(withEmail: "ard51@duke.edu", password: "midlight")
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
         retrieveUserInfo()
+        acts = [actOne,actTwo,actThree,actFour,actFive,actSix, actSeven,actEight,actNine,actTen]
         // Do any additional setup after loading the view.
     }
     
     func retrieveUserInfo(){
+        
         let db = Firestore.firestore()
         let userID = Auth.auth().currentUser?.uid
         let profileData = db.collection(userID!).document("profile")
@@ -39,6 +59,12 @@ class ProfileVC: UIViewController {
         profileData.getDocument { (document, error) in
             if let document = document, document.exists {
                 self.moods[document.data()!["mood"] as! Int].backgroundColor = self.SELECTED
+                let newActivities = document.data()!["newActivities"] as! Array<String>
+                var idx = 0
+                for a in newActivities {
+                    self.acts[idx].image = UIImage(named:self.descToImage[a]!)
+                    idx = idx + 1
+                }
                 
           }
         }
