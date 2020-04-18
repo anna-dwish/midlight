@@ -50,6 +50,7 @@ class CreateAccountVC: UIViewController {
         Auth.auth().signIn(withEmail: (self?.email.text!)!, password: (self?.password.text!)!)
         self?.performSegue(withIdentifier: "beginQuestionnaire", sender: self)
       }
+        
     }
 
 }
