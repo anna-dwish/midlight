@@ -30,11 +30,14 @@ class ProfileCreatorVC: UIViewController {
         changeRequest?.commitChanges { (error) in
             if error != nil {
                 self.inputAid.text = "Please try again"
+                return
             }
             else{
                 self.updateDatabase()
+                self.performSegue(withIdentifier:"loginNewUser",sender:self)
             }
         }
+        
         
     }
     
