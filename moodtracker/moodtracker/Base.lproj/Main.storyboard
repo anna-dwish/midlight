@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xx6-yC-xcV">
@@ -902,6 +902,7 @@
                         <outlet property="finishProfile" destination="WK5-Hg-GSZ" id="3gl-MA-yll"/>
                         <outlet property="inputAid" destination="SHd-8c-9ei" id="K7t-0l-Hrq"/>
                         <outlet property="userName" destination="iGt-j7-NUf" id="QCR-Oh-9Wl"/>
+                        <segue destination="GnI-G8-HIH" kind="show" identifier="loginNewUser" id="7g5-9M-5oU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dak-ea-hGI" sceneMemberID="firstResponder"/>
@@ -1818,7 +1819,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4t-g9-ZZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2517" y="834"/>
+            <point key="canvasLocation" x="3180" y="1032"/>
         </scene>
         <!--Title-->
         <scene sceneID="fVL-5J-PBm">
@@ -2372,6 +2373,9 @@
             <point key="canvasLocation" x="2644.9275362318845" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7g5-9M-5oU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cook" width="40" height="40"/>
         <image name="draw" width="32" height="32"/>
