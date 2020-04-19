@@ -64,7 +64,10 @@ class HomeVC: UIViewController {
             "activities": [String]()
         ]) { err in
             if let err = err {
-                print("Error writing document: \(err)")
+                db.collection(userID!).document(today).setData([
+                    "mood": self.selectedMood,
+                    "activities": [String]()
+                ])
             } else {
                 print("Document successfully written!")
             }

@@ -190,7 +190,6 @@
                                 </state>
                                 <connections>
                                     <action selector="goToNextQuestion" destination="Vjc-OF-bJI" eventType="touchUpInside" id="fG3-lJ-K99"/>
-                                    <segue destination="GdQ-n1-2LF" kind="show" identifier="welcomeToCurrent" id="3m8-qG-dhP"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brm-UB-a93">
@@ -229,6 +228,7 @@
                     <navigationItem key="navigationItem" id="Vhc-S6-GrW"/>
                     <connections>
                         <outlet property="nextQuestion" destination="TFY-Xu-5Ie" id="uLk-ek-6xk"/>
+                        <segue destination="GdQ-n1-2LF" kind="show" identifier="welcomeToCurrent" id="6F7-TG-k6w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Byk-hs-GoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

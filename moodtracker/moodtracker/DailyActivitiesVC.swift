@@ -54,7 +54,10 @@ class DailyActivitiesVC: UIViewController {
             "activities": Array(selectedActivities)
         ]) { err in
             if let err = err {
-                print("Error writing document: \(err)")
+                db.collection(userID!).document(today).setData([
+                    "mood": 4,
+                    "activities": [String]()
+                ])
             } else {
                 print("Document successfully written!")
             }
