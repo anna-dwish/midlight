@@ -15,13 +15,31 @@ class HomeVC: UIViewController {
     @IBOutlet weak var moodFour: UIButton!
     @IBOutlet weak var moodFive: UIButton!
     
+    
     var moods = [UIButton]()
     var selectedMood = 0
     let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
     
+    var newActivities = [String]()
+    var currentActivities = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
+        retrieveUserSpecificActivities()
+    }
+    
+    func retrieveUserSpecificActivities(){
+        let db = Firestore.firestore()
+        let userID = Auth.auth().currentUser?.uid
+        let profileData = db.collection(userID!).document("profile")
+
+        profileData.getDocument { (document, error) in
+            if let document = document, document.exists {
+                self.newActivities = document.data()!["newActivities"] as! Array<String>
+                self.currentActivities = document.data()!["currentActivities"] as! Array<String>
+          }
+        }
     }
     
     @IBAction func setMood(_ sender: UIButton) {
