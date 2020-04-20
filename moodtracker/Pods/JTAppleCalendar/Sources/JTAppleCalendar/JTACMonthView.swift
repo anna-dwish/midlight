@@ -39,7 +39,7 @@ open class JTAppleCalendarView: UICollectionView {}
 open class JTACMonthView: UICollectionView {
     
     /// Configures the size of your date cells
-    @IBInspectable open var cellSize: CGFloat = 0 {
+    @IBInspectable open var cellSize: CGFloat = 8 {
         didSet {
             if oldValue == cellSize { return }
             calendarViewLayout.invalidateLayout()
@@ -172,13 +172,13 @@ open class JTACMonthView: UICollectionView {
         get { return _sectionInset }
     }
     
-    var _minimumInteritemSpacing: CGFloat = 0
+    var _minimumInteritemSpacing: CGFloat = 10
     open var minimumInteritemSpacing: CGFloat {
         set { _minimumInteritemSpacing = newValue < 0 ? 0 : newValue }
         get { return _minimumInteritemSpacing }
     }
 
-    var _minimumLineSpacing: CGFloat = 0
+    var _minimumLineSpacing: CGFloat = 15
     open var minimumLineSpacing: CGFloat {
         set { _minimumLineSpacing = newValue < 0 ? 0 : newValue }
         get { return _minimumLineSpacing }

@@ -43,8 +43,8 @@ class JTACMonthLayout: UICollectionViewLayout, JTACMonthLayoutProtocol {
     var endOfSectionOffsets: [CGFloat] = []
     var lastWrittenCellAttribute: (Int, Int, CGFloat, CGFloat, CGFloat, CGFloat)!
     var xStride: CGFloat = 0
-    var minimumInteritemSpacing: CGFloat = 0
-    var minimumLineSpacing: CGFloat = 0
+    var minimumInteritemSpacing: CGFloat = 10
+    var minimumLineSpacing: CGFloat = 5
     var sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     var headerSizes: [AnyHashable:CGFloat] = [:]
     var focusIndexPath: IndexPath?
