@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xx6-yC-xcV">
@@ -1565,6 +1565,7 @@
                         <outlet property="moodOne" destination="aaT-TP-vKb" id="SL6-tb-pLY"/>
                         <outlet property="moodThree" destination="2pa-1Y-zNW" id="KWk-tu-ahV"/>
                         <outlet property="moodTwo" destination="a0l-c0-MO0" id="neZ-jM-NrU"/>
+                        <outlet property="quote" destination="K8t-NB-M4b" id="xgU-ai-e4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akQ-aO-dVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
