@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var moodFour: UIButton!
     @IBOutlet weak var moodFive: UIButton!
     
+    @IBOutlet weak var quote: UITextView!
     
     var moods = [UIButton]()
     var selectedMood = 0
@@ -25,8 +26,72 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getQuote()
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
         retrieveUserSpecificActivities()
+    }
+    
+    func getQuote() {
+        
+        struct item: Codable {
+            var quote: String
+            var author: String
+        }
+        
+        do {
+            let path = Bundle.main.path(forResource: "quotes", ofType: "json")!
+            let url = URL(fileURLWithPath: path)
+            let data = try Data(contentsOf: url)
+            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            
+            guard let quotesDict = json as? [String: [[String: String]]] else { return }
+            
+            var index = Int.random(in: 0...quotesDict["quotes"]!.count)
+            //var q = quotesDict.values.randomElement()
+            //var q = quotesDict.values.
+            //quote.text = quotesDict.values.randomElement()
+            var q = quotesDict["quotes"]![index]
+            quote.text = q["quote"]! + " -" + q["author"]!
+            /*guard let all = quotesDict["quote"] as? [String: Any] else {
+                print("not an array of dictionaries")
+                return
+            }*/
+            
+            
+            //let data = try Data(contentsOf: url)
+            //let quotesArray = try! JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: url)), options: JSONSerialization.ReadingOptions()) as? [Any]
+            
+            //var finalQuoteArray:[String] = []
+            //var finalAuthorArray:[String] = []
+            //var finalArray: [item] = []
+            //print(quotesArray?[0])
+            
+            /*for dict in quotesArray! {
+                //var quote: item
+                
+                if let dict = quotesArray as? [String: Any], let quoteArr = dict["quote"] as? [String] {
+                    //quote.quote = quoteArr
+                    finalQuoteArray.append(contentsOf: quoteArr)
+                }
+                if let dict = quotesArray as? [String: Any], let authorArr = dict["author"] as? [String] {
+                    finalAuthorArray.append(contentsOf: authorArr)
+                    //quote.author = authorArr
+                }
+            }*/
+            //let num = finalQuoteArray.count
+            //quote.text = finalQuoteArray[Int.random(in: 0...num)]
+            
+            //let decoder = JSONDecoder()
+            //let model = try decoder.decode([item].self, from: data)
+            //print(model.count)
+            
+            //var json = try? JSONSerialization.jsonObject(with: data)
+            
+            //print(json)
+        } catch {
+            print(error)
+        }
+        //quote.text
     }
     
     func retrieveUserSpecificActivities(){
