@@ -15,139 +15,162 @@ class HomeVC: UIViewController {
     @IBOutlet weak var moodFour: UIButton!
     @IBOutlet weak var moodFive: UIButton!
     
+    @IBOutlet weak var recImage: UIImageView!
+    @IBOutlet weak var rec: UITextView!
     @IBOutlet weak var quote: UITextView!
     
-    var moods = [UIButton]()
-    var selectedMood = 0
-    let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
-    
-    var newActivities = [String]()
-    var currentActivities = [String]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getQuote()
-        moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
-        retrieveUserSpecificActivities()
-    }
-    
-    func getQuote() {
+    let descToImage:[String:String] = ["cooking/Baking":"cook","reading":"read",
+        "playing with pets":"pets","creating art":"paint",
+        "exercise":"exercise","watching media":"tv",
+        "being in nature":"nature","journaling":"journalbook",
+        "talking to others":"talk"]
         
-        struct item: Codable {
-            var quote: String
-            var author: String
+        var moods = [UIButton]()
+        var selectedMood = 0
+        let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
+        
+        var newActivities = [String]()
+        var currentActivities = [String]()
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            getQuote()
+            moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
+            retrieveUserSpecificActivities()
         }
         
-        do {
-            let path = Bundle.main.path(forResource: "quotes", ofType: "json")!
-            let url = URL(fileURLWithPath: path)
-            let data = try Data(contentsOf: url)
-            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        func getQuote() {
             
-            guard let quotesDict = json as? [String: [[String: String]]] else { return }
+            struct item: Codable {
+                var quote: String
+                var author: String
+            }
             
-            var index = Int.random(in: 0...quotesDict["quotes"]!.count)
-            //var q = quotesDict.values.randomElement()
-            //var q = quotesDict.values.
-            //quote.text = quotesDict.values.randomElement()
-            var q = quotesDict["quotes"]![index]
-            quote.text = q["quote"]! + " -" + q["author"]!
-            /*guard let all = quotesDict["quote"] as? [String: Any] else {
-                print("not an array of dictionaries")
-                return
-            }*/
-            
-            
-            //let data = try Data(contentsOf: url)
-            //let quotesArray = try! JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: url)), options: JSONSerialization.ReadingOptions()) as? [Any]
-            
-            //var finalQuoteArray:[String] = []
-            //var finalAuthorArray:[String] = []
-            //var finalArray: [item] = []
-            //print(quotesArray?[0])
-            
-            /*for dict in quotesArray! {
-                //var quote: item
+            do {
+                let path = Bundle.main.path(forResource: "quotes", ofType: "json")!
+                let url = URL(fileURLWithPath: path)
+                let data = try Data(contentsOf: url)
+                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                 
-                if let dict = quotesArray as? [String: Any], let quoteArr = dict["quote"] as? [String] {
-                    //quote.quote = quoteArr
-                    finalQuoteArray.append(contentsOf: quoteArr)
-                }
-                if let dict = quotesArray as? [String: Any], let authorArr = dict["author"] as? [String] {
-                    finalAuthorArray.append(contentsOf: authorArr)
-                    //quote.author = authorArr
-                }
-            }*/
-            //let num = finalQuoteArray.count
-            //quote.text = finalQuoteArray[Int.random(in: 0...num)]
-            
-            //let decoder = JSONDecoder()
-            //let model = try decoder.decode([item].self, from: data)
-            //print(model.count)
-            
-            //var json = try? JSONSerialization.jsonObject(with: data)
-            
-            //print(json)
-        } catch {
-            print(error)
+                guard let quotesDict = json as? [String: [[String: String]]] else { return }
+                
+                var index = Int.random(in: 0...quotesDict.values.count)
+                //var q = quotesDict.values.randomElement()
+                //var q = quotesDict.values.
+                //quote.text = quotesDict.values.randomElement()
+                var q = quotesDict["quotes"]![index]
+                quote.text = q["quote"]! + " -" + q["author"]!
+                /*guard let all = quotesDict["quote"] as? [String: Any] else {
+                    print("not an array of dictionaries")
+                    return
+                }*/
+                
+                
+                //let data = try Data(contentsOf: url)
+                //let quotesArray = try! JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: url)), options: JSONSerialization.ReadingOptions()) as? [Any]
+                
+                //var finalQuoteArray:[String] = []
+                //var finalAuthorArray:[String] = []
+                //var finalArray: [item] = []
+                //print(quotesArray?[0])
+                
+                /*for dict in quotesArray! {
+                    //var quote: item
+                    
+                    if let dict = quotesArray as? [String: Any], let quoteArr = dict["quote"] as? [String] {
+                        //quote.quote = quoteArr
+                        finalQuoteArray.append(contentsOf: quoteArr)
+                    }
+                    if let dict = quotesArray as? [String: Any], let authorArr = dict["author"] as? [String] {
+                        finalAuthorArray.append(contentsOf: authorArr)
+                        //quote.author = authorArr
+                    }
+                }*/
+                //let num = finalQuoteArray.count
+                //quote.text = finalQuoteArray[Int.random(in: 0...num)]
+                
+                //let decoder = JSONDecoder()
+                //let model = try decoder.decode([item].self, from: data)
+                //print(model.count)
+                
+                //var json = try? JSONSerialization.jsonObject(with: data)
+                
+                //print(json)
+            } catch {
+                print(error)
+            }
+            //quote.text
         }
-        //quote.text
-    }
-    
-    func retrieveUserSpecificActivities(){
-        let db = Firestore.firestore()
-        let userID = Auth.auth().currentUser?.uid
-        let profileData = db.collection(userID!).document("profile")
+        
+        func retrieveUserSpecificActivities(){
+            let db = Firestore.firestore()
+            let userID = Auth.auth().currentUser?.uid
+            let profileData = db.collection(userID!).document("profile")
 
-        profileData.getDocument { (document, error) in
-            if let document = document, document.exists {
-                self.newActivities = document.data()!["newActivities"] as! Array<String>
-                self.currentActivities = document.data()!["currentActivities"] as! Array<String>
-          }
-        }
-    }
-    
-    @IBAction func setMood(_ sender: UIButton) {
-       sender.backgroundColor = SELECTED
-       selectedMood = moods.firstIndex(of: sender)!
-       for m in moods {
-           if m != sender{
-               m.backgroundColor = UIColor.white
-           }
-       }
-        updateDatabase()
-    }
-    
-    func updateDatabase(){
-        let db = Firestore.firestore()
-        let userID = Auth.auth().currentUser?.uid
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let today = formatter.string(from: Date())
-        db.collection(userID!).document(today).updateData([
-            "mood": selectedMood,
-            "activities": [String]()
-        ]) { err in
-            if let err = err {
-                db.collection(userID!).document(today).setData([
-                    "mood": self.selectedMood,
-                    "activities": [String]()
-                ])
+            profileData.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    self.newActivities = document.data()!["newActivities"] as! Array<String>
+                    self.currentActivities = document.data()!["currentActivities"] as! Array<String>
+              }
+            }
+            newActivities.append(contentsOf: currentActivities)
+            //print(newActivities)
+            let ind = Int.random(in: 0...newActivities.count)
+            if(newActivities.count==0) {
+                let str = descToImage.keys.randomElement()
+                rec.text = "Try " + str! + " today!"
+                //print(descToImage[str])
+                recImage.image = UIImage(named: descToImage[str!]!)
             } else {
-                print("Document successfully written!")
+                let activity = newActivities[ind]
+                rec.text = "Try: " + activity + " today!"
+                //let pic = descToImage[activity]!
+                recImage.image = UIImage(named: descToImage[activity]!)
+            }
+           
+        }
+        
+        @IBAction func setMood(_ sender: UIButton) {
+           sender.backgroundColor = SELECTED
+           selectedMood = moods.firstIndex(of: sender)!
+           for m in moods {
+               if m != sender{
+                   m.backgroundColor = UIColor.white
+               }
+           }
+            updateDatabase()
+        }
+        
+        func updateDatabase(){
+            let db = Firestore.firestore()
+            let userID = Auth.auth().currentUser?.uid
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let today = formatter.string(from: Date())
+            db.collection(userID!).document(today).updateData([
+                "mood": selectedMood,
+                "activities": [String]()
+            ]) { err in
+                if let err = err {
+                    db.collection(userID!).document(today).setData([
+                        "mood": self.selectedMood,
+                        "activities": [String]()
+                    ])
+                } else {
+                    print("Document successfully written!")
+                }
             }
         }
+        
+
+        /*
+        // MARK: - Navigation
+
+        // In a storyboard-based application, you will often want to do a little preparation before navigation
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // Get the new view controller using segue.destination.
+            // Pass the selected object to the new view controller.
+        }
+        */
+
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
