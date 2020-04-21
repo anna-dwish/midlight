@@ -33,6 +33,12 @@ class DailyActivitiesVC: UIViewController {
     }
     
     @IBAction func activityButtonClk(_ sender: UIButton) {
+        if !Reachability.isConnectedToNetwork(){
+            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert1, animated: true)
+            return
+        }
         if sender.backgroundColor == SELECTED{
             sender.backgroundColor = NEUTRAL
             selectedActivities.remove(sender.titleLabel!.text!)

@@ -28,6 +28,12 @@ class SignInVC: UIViewController {
             signinAid.text = "Please enter both fields"
             return
         }
+        else if !Reachability.isConnectedToNetwork(){
+            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert1, animated: true)
+            return
+        }
         validateSignIn()
     }
         

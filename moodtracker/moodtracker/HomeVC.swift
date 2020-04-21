@@ -54,11 +54,11 @@ class HomeVC: UIViewController {
                 
                 guard let quotesDict = json as? [String: [[String: String]]] else { return }
                 
-                var index = Int.random(in: 0...quotesDict.values.count)
+                let index = Int.random(in: 0...quotesDict.values.count)
                 //var q = quotesDict.values.randomElement()
                 //var q = quotesDict.values.
                 //quote.text = quotesDict.values.randomElement()
-                var q = quotesDict["quotes"]![index]
+                let q = quotesDict["quotes"]![index]
                 quote.text = q["quote"]! + " -" + q["author"]!
                 /*guard let all = quotesDict["quote"] as? [String: Any] else {
                     print("not an array of dictionaries")
@@ -106,15 +106,15 @@ class HomeVC: UIViewController {
             let db = Firestore.firestore()
             let userID = Auth.auth().currentUser?.uid
             let profileData = db.collection(userID!).document("profile")
-
+            
             profileData.getDocument { (document, error) in
                 if let document = document, document.exists {
                     self.newActivities = document.data()!["newActivities"] as! Array<String>
                     self.currentActivities = document.data()!["currentActivities"] as! Array<String>
+                    
               }
             }
             newActivities.append(contentsOf: currentActivities)
-            //print(newActivities)
             let ind = Int.random(in: 0...newActivities.count)
             if(newActivities.count==0) {
                 let str = descToImage.keys.randomElement()
@@ -122,15 +122,21 @@ class HomeVC: UIViewController {
                 //print(descToImage[str])
                 recImage.image = UIImage(named: descToImage[str!]!)
             } else {
-                let activity = newActivities[ind]
-                rec.text = "Try: " + activity + " today!"
-                //let pic = descToImage[activity]!
-                recImage.image = UIImage(named: descToImage[activity]!)
+            let activity = newActivities[ind]
+            rec.text = "Try: " + activity + " today!"
+            //let pic = descToImage[activity]!
+            recImage.image = UIImage(named: descToImage[activity]!)
             }
            
         }
         
         @IBAction func setMood(_ sender: UIButton) {
+           if !Reachability.isConnectedToNetwork(){
+               let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+               alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+               self.present(alert1, animated: true)
+               return
+           }
            sender.backgroundColor = SELECTED
            selectedMood = moods.firstIndex(of: sender)!
            for m in moods {
@@ -151,7 +157,7 @@ class HomeVC: UIViewController {
                 "mood": selectedMood,
                 "activities": [String]()
             ]) { err in
-                if let err = err {
+                if err != nil {
                     db.collection(userID!).document(today).setData([
                         "mood": self.selectedMood,
                         "activities": [String]()
