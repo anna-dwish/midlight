@@ -19,8 +19,6 @@ class DailyActivitiesVC: UIViewController {
     @IBOutlet weak var actSix: UIButton!
     @IBOutlet weak var actSeven: UIButton!
     @IBOutlet weak var actEight: UIButton!
-    @IBOutlet weak var actNine: UIButton!
-    @IBOutlet weak var actTen: UIButton!
     
     let NEUTRAL = UIColor(red: 226/255, green: 215/255, blue: 236/255, alpha: 1)
     let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)

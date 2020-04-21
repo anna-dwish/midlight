@@ -18,8 +18,6 @@ class CurrentActivitiesVC: UIViewController {
     @IBOutlet weak var media: UIButton!
     @IBOutlet weak var nature: UIButton!
     @IBOutlet weak var journal: UIButton!
-    @IBOutlet weak var talk: UIButton!
-    @IBOutlet weak var other: UIButton!
     @IBOutlet weak var nextQuestion: UIButton!
     
    

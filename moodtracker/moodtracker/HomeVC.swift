@@ -24,8 +24,7 @@ class HomeVC: UIViewController {
     let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
     "Playing with Pets":"pets","Creating art":"paint",
     "Exercise":"exercise","Watching media":"tv",
-    "Being in nature":"nature","Journaling":"draw",
-    "Talking":"talk","Other":"ellipsis"]
+    "Being in nature":"nature","Journaling":"draw"]
         
         var moods = [UIButton]()
         var selectedMood = 0
@@ -106,7 +105,7 @@ class HomeVC: UIViewController {
         }
     
         func promptUserActivity(options:[String]){
-            let ind = Int.random(in: 0...options.count)
+            let ind = Int.random(in: 0..<options.count)
             let activity = options[ind]
             rec.text = "Try " + activity + " today!"
             recImage.image = UIImage(named: descToImage[activity]!)

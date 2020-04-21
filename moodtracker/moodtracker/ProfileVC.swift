@@ -24,11 +24,9 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var actThree: UIImageView!
     @IBOutlet weak var actFour: UIImageView!
     @IBOutlet weak var actFive: UIImageView!
-    @IBOutlet weak var actSix: UIImageView!
     @IBOutlet weak var actSeven: UIImageView!
     @IBOutlet weak var actEight: UIImageView!
     @IBOutlet weak var actNine: UIImageView!
-    @IBOutlet weak var actTen: UIImageView!
     
     var moods = [UIButton]()
     var acts = [UIImageView]()
@@ -44,7 +42,7 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
-        acts = [actOne,actTwo,actThree,actFour,actFive,actSix, actSeven,actEight,actNine,actTen]
+        acts = [actOne,actTwo,actThree,actFour,actFive, actSeven,actEight,actNine]
         if !Reachability.isConnectedToNetwork(){
             let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
             alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
