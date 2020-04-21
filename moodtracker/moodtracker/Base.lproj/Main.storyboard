@@ -956,7 +956,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="gyO-QT-lRr"/>
                     <connections>
-                        <outlet property="calendarView" destination="cVd-bJ-bik" id="zS3-xZ-axa"/>
                         <segue destination="c2L-NZ-UeK" kind="show" identifier="monthToDay" id="JdA-g8-Idd"/>
                     </connections>
                 </viewController>
