@@ -18,12 +18,14 @@ class CalendarViewController: UIViewController {
 //    var todayCell:JTACDayCell? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         
-        
-        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("CALLED viewWillAppear")
+        calendarView.reloadDates([Date()])
+    }
 
 }
 
@@ -32,6 +34,8 @@ class DateHeader: JTACMonthReusableView  {
 }
 
 extension CalendarViewController: JTACMonthViewDataSource {
+
+    
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
@@ -48,9 +52,6 @@ extension CalendarViewController: JTACMonthViewDataSource {
 
 extension CalendarViewController: JTACMonthViewDelegate {
     
-    override func viewWillAppear(_ animated: Bool) {
-        calendarView.reloadDates([Date()])
-    }
     
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
         let moods = ["lowest","low","middle","high","highest"]
