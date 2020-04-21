@@ -13,11 +13,17 @@ import JTAppleCalendar
 class CalendarViewController: UIViewController {
 //    @IBOutlet weak var currentMonth: UILabel!
     var selectedDate = ""
+    @IBOutlet weak var calendarView: JTACMonthView!
+    
+//    var todayCell:JTACDayCell? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        
         
         // Do any additional setup after loading the view.
     }
+    
 
 }
 
@@ -32,17 +38,19 @@ extension CalendarViewController: JTACMonthViewDataSource {
         let endDate = Date()
         let comp: DateComponents = Calendar.current.dateComponents([.year, .month], from: endDate)
         let startDate = formatter.date(from: formatter.string(from: Calendar.current.date(from: comp)!))
-        
-
-//        let startDate = formatter.date(from: "2020 04 01")!
-        
-        
         return ConfigurationParameters(startDate: startDate!, endDate: endDate, generateInDates: .forAllMonths,
         generateOutDates: .tillEndOfGrid)
     }
+    
 }
 
+
+
 extension CalendarViewController: JTACMonthViewDelegate {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        calendarView.reloadDates([Date()])
+    }
     
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
         let moods = ["lowest","low","middle","high","highest"]
@@ -50,11 +58,10 @@ extension CalendarViewController: JTACMonthViewDelegate {
         
         cell.dateLabel.text = cellState.text
         if !Reachability.isConnectedToNetwork(){
-            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
-            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert1, animated: true)
+            displayConnectionAlert()
             return cell
         }
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let dateString = formatter.string(from:date)
@@ -69,8 +76,17 @@ extension CalendarViewController: JTACMonthViewDelegate {
                 cell.segueButton.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
            }
         }
-        self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath) // inDate / outDate
+        self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)
+//        if date == Date(){
+//            todayCell = cell
+//        }
         return cell
+    }
+    
+    func displayConnectionAlert(){
+        let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+        alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert1, animated: true)
     }
     
     func generateDocumentName(dateOfCell:String) -> DocumentReference{
@@ -92,6 +108,7 @@ extension CalendarViewController: JTACMonthViewDelegate {
         cell.dateLabel.text = cellState.text
         handleCellTextColor(cell: cell, cellState: cellState)
         cell.backgroundColor = UIColor(red: 226/255, green: 215/255, blue: 236/255, alpha: 1)
+        
         
     }
         

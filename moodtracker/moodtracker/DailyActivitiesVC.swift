@@ -54,18 +54,34 @@ class DailyActivitiesVC: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let today = formatter.string(from: Date())
-        db.collection(userID!).document(today).updateData([
-            "activities": Array(selectedActivities)
-        ]) { err in
-            if let err = err {
-                db.collection(userID!).document(today).setData([
-                    "mood": 4,
-                    "activities": [String]()
-                ])
-            } else {
-                print("Document successfully written!")
+        let dailyInput = db.collection(userID!).document(today)
+        dailyInput.getDocument { (document, error) in
+            if let document = document {
+                if document.exists{
+                   db.collection(userID!).document(today).updateData([
+                    "activities": Array(self.selectedActivities)
+                    ])
+                }
+                else {
+                    let alert1 = UIAlertController(title: "Mood Input", message: "Please enter your mood first in Home", preferredStyle: .alert) //.actionSheet
+                    alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert1, animated: true)
+                    return
+                }
             }
         }
+//        db.collection(userID!).document(today).updateData([
+//            "activities": Array(selectedActivities)
+//        ]) { err in
+//            if let err = err {
+//                let alert1 = UIAlertController(title: "Mood Input", message: "Please enter your mood first in Home", preferredStyle: .alert) //.actionSheet
+//                alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                self.present(alert1, animated: true)
+//                return
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
         
     }
     

@@ -352,7 +352,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCq-ho-acs">
-                                <rect key="frame" x="90.666666666666686" y="677.66666666666663" width="194" height="67"/>
+                                <rect key="frame" x="90.666666666666686" y="667.66666666666663" width="194" height="67"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="194" id="4hZ-QE-XO5"/>
@@ -395,7 +395,7 @@
                             <constraint firstItem="o5V-9W-4ha" firstAttribute="centerY" secondItem="6As-gd-z14" secondAttribute="centerY" constant="-150" id="JgN-01-61Z"/>
                             <constraint firstItem="NZY-5T-ELa" firstAttribute="centerY" secondItem="6As-gd-z14" secondAttribute="centerY" constant="-33" id="KAu-54-euh"/>
                             <constraint firstItem="6iX-4m-bce" firstAttribute="centerX" secondItem="6As-gd-z14" secondAttribute="centerX" constant="-91" id="W1p-uw-qHL"/>
-                            <constraint firstItem="eCq-ho-acs" firstAttribute="centerY" secondItem="6As-gd-z14" secondAttribute="centerY" constant="305" id="bgK-Gq-MwD"/>
+                            <constraint firstItem="eCq-ho-acs" firstAttribute="centerY" secondItem="6As-gd-z14" secondAttribute="centerY" constant="295" id="bgK-Gq-MwD"/>
                             <constraint firstItem="u4T-LJ-3YN" firstAttribute="centerX" secondItem="6As-gd-z14" secondAttribute="centerX" constant="-91" id="hUo-9U-IsE"/>
                             <constraint firstItem="NQR-te-Ave" firstAttribute="centerY" secondItem="6As-gd-z14" secondAttribute="centerY" constant="-253.66999999999999" id="jBJ-1u-5da"/>
                             <constraint firstItem="ofN-r8-xJR" firstAttribute="centerX" secondItem="6As-gd-z14" secondAttribute="centerX" constant="-91" id="qTg-B7-Deg"/>
@@ -556,7 +556,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkE-yn-qvt">
-                                <rect key="frame" x="90.666666666666686" y="677.66666666666663" width="194" height="67"/>
+                                <rect key="frame" x="90.666666666666686" y="667.66666666666663" width="194" height="67"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="CS2-YF-il1"/>
@@ -574,7 +574,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="0jD-Mo-XdA" firstAttribute="centerY" secondItem="8Eh-bZ-aAk" secondAttribute="centerY" constant="-149" id="0YP-nD-52a"/>
-                            <constraint firstItem="TkE-yn-qvt" firstAttribute="centerY" secondItem="8Eh-bZ-aAk" secondAttribute="centerY" constant="305" id="2PL-5d-pqs"/>
+                            <constraint firstItem="TkE-yn-qvt" firstAttribute="centerY" secondItem="8Eh-bZ-aAk" secondAttribute="centerY" constant="295" id="2PL-5d-pqs"/>
                             <constraint firstItem="oSC-h4-PDa" firstAttribute="centerY" secondItem="8Eh-bZ-aAk" secondAttribute="centerY" constant="201" id="7J8-bi-Byy"/>
                             <constraint firstItem="TkE-yn-qvt" firstAttribute="centerX" secondItem="8Eh-bZ-aAk" secondAttribute="centerX" id="9G0-Zf-KFZ"/>
                             <constraint firstItem="CXg-oM-PQu" firstAttribute="centerX" secondItem="8Eh-bZ-aAk" secondAttribute="centerX" constant="92" id="CP7-7S-80m"/>
@@ -956,6 +956,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gyO-QT-lRr"/>
                     <connections>
+                        <outlet property="calendarView" destination="cVd-bJ-bik" id="zS3-xZ-axa"/>
                         <segue destination="c2L-NZ-UeK" kind="show" identifier="monthToDay" id="JdA-g8-Idd"/>
                     </connections>
                 </viewController>

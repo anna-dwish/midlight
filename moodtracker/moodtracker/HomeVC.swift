@@ -141,19 +141,37 @@ class HomeVC: UIViewController {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             let today = formatter.string(from: Date())
-            db.collection(userID!).document(today).updateData([
-                "mood": selectedMood,
-                "activities": [String]()
-            ]) { err in
-                if err != nil {
-                    db.collection(userID!).document(today).setData([
-                        "mood": self.selectedMood,
-                        "activities": [String]()
-                    ])
-                } else {
-                    print("Document successfully written!")
+            
+            let dailyInput = db.collection(userID!).document(today)
+            dailyInput.getDocument { (document, error) in
+                if let document = document {
+                    if document.exists{
+                       db.collection(userID!).document(today).updateData([
+                        "mood": self.selectedMood
+                       ])
+                    }
+                    else {
+                        db.collection(userID!).document(today).setData([
+                            "mood": self.selectedMood,
+                            "activities": [String]()
+                        ])
+                    }
                 }
             }
+            
+//            db.collection(userID!).document(today).updateData([
+//                "mood": selectedMood,
+//                "activities": [String]()
+//            ]) { err in
+//                if err != nil {
+//                    db.collection(userID!).document(today).setData([
+//                        "mood": self.selectedMood,
+//                        "activities": [String]()
+//                    ])
+//                } else {
+//                    print("Document successfully written!")
+//                }
+//            }
         }
         
 
