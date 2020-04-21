@@ -8,21 +8,26 @@
 1. A personal account that stores the user's information
 2. An initial survey to gather a summary of where the user is beginning at and to be able to immediately provide feedback on their mental health status
 3. A daily check-in where a user may quickly select from options their overall mood for the day and input a summary of accomplished activities were done for the user's mental health
-4. Daily alerts to remind users to input their  information
-5. Alerts to remind user to keep on track with what helps their mental health
-6. Motivating & humorous reminders throughout the day to encourage positive thinking
-7. Connection to the HealthKit framework in order to tie in physical health inputs that may be affecting mental health
-8. Alerts that catch inconsistencies in mood/tracking
-9. A diary page where the user can put notes or write about how they are feeling
-10. A resource page of professional contacts for emergent situations
+4. Daily alerts to remind users to input their information
+5. Motivating/humorous quote that changes each day to encourage positive thinking
+6. A resource page of professional contacts for emergent situations
+7. A calendar view to track their mental health progress for the month
 
 ## Overall Architecture
-1. Splash page of past three days summary, what area could be improved on, & which area was done well
-2. Ability to open the past three days to preview a more detailed summary of that day
-3. A personal profile page where one may add/change information, such as activities used to improve mood
-4. Access to archive of data from the past
+1. Tab View with 5 options: information, journal, home, calendar, & profile
+2. Information option will include discussion about more extensive resources
+3. Journal will prompt user to enter activities accomplished that day
+4. Home option will display daily recommendations and prompt to enter mood
+5. Calendar will display month's summary of moods and allow users to get a detail view of any day they tracked
+6. Profile page will provide a summary from the initial questionnaire
 
 ## Audience
-We are hoping to target people who understand they can imporve their mental help and want assistance doing so in their everyday lives, or people who are curious about how their everyday habits are impacting their mental health. 
+We are hoping to target people who wish to become more in tune with their mental health and track activities that are associated with more positive moods. Additionally, we hope to help people be mindful of their day to day mood and feel empowered to take action to improve it.
+
+## Contributions
+1. Zoe Superville: Developed initial wireframe, designed general UI for tab views, improved segues between views, developed daily notification + initial permission prompt for access to notifying users
+2. Kassen Qian: Developed initial figma mockups, designed UI themes & initial questionnaire, developed calendar UI, designed app icon
+3. Laura Li: Researched survey questions and activities pertaining to mental health, developed JSON parsing for daily motivational quote, used database to prompt users with a personalized daily activity recommendation, + designed home page
+4. Anna Darwish: Developed database integration for user authentication + daily data input + historical/profile information with Firebase, implemented error checking for poor input when creating a new profile, implemented network connectivity alerts, integrated JTAppleCalendar pod into project, +  designed detail calendar UI view and sigin in/sign up views
 
 

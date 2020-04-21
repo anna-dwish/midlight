@@ -18,8 +18,6 @@ class NewActivitiesVC: UIViewController {
     @IBOutlet weak var media: UIButton!
     @IBOutlet weak var nature: UIButton!
     @IBOutlet weak var journal: UIButton!
-    @IBOutlet weak var talk: UIButton!
-    @IBOutlet weak var other: UIButton!
     @IBOutlet weak var nextQuestion: UIButton!
     
     let NEUTRAL = UIColor(red: 226/255, green: 215/255, blue: 236/255, alpha: 1)
@@ -30,7 +28,7 @@ class NewActivitiesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let activities = [cook,read,pets,art,exercise,media,nature,journal,talk,other]
+        let activities = [cook,read,pets,art,exercise,media,nature,journal]
         for selectedAct in activities {
             if currentActivities.contains((selectedAct?.titleLabel?.text)!){
                 selectedAct!.isEnabled = false

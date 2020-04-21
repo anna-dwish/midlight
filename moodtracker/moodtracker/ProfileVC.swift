@@ -24,18 +24,16 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var actThree: UIImageView!
     @IBOutlet weak var actFour: UIImageView!
     @IBOutlet weak var actFive: UIImageView!
-    @IBOutlet weak var actSix: UIImageView!
     @IBOutlet weak var actSeven: UIImageView!
     @IBOutlet weak var actEight: UIImageView!
     @IBOutlet weak var actNine: UIImageView!
-    @IBOutlet weak var actTen: UIImageView!
     
     var moods = [UIButton]()
     var acts = [UIImageView]()
     let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
     "Playing with Pets":"pets","Creating art":"paint",
     "Exercise":"exercise","Watching media":"tv",
-    "Being in nature":"nature","Journaling":"journalbook",
+    "Being in nature":"nature","Journaling":"draw",
     "Talking":"talk","Other":"ellipsis"]
     
     let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
@@ -44,7 +42,7 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
-        acts = [actOne,actTwo,actThree,actFour,actFive,actSix, actSeven,actEight,actNine,actTen]
+        acts = [actOne,actTwo,actThree,actFour,actFive, actSeven,actEight,actNine]
         if !Reachability.isConnectedToNetwork(){
             let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
             alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
