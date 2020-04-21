@@ -35,7 +35,7 @@ class ProfileVC: UIViewController {
     let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
     "Playing with Pets":"pets","Creating art":"paint",
     "Exercise":"exercise","Watching media":"tv",
-    "Being in nature":"nature","Journaling":"journalbook",
+    "Being in nature":"nature","Journaling":"draw",
     "Talking":"talk","Other":"ellipsis"]
     
     let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)

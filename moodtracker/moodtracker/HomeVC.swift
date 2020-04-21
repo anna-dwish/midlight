@@ -21,18 +21,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var rec: UITextView!
     @IBOutlet weak var quote: UITextView!
     
-    let descToImage:[String:String] = ["cooking/Baking":"cook","reading":"read",
-        "playing with pets":"pets","creating art":"paint",
-        "exercise":"exercise","watching media":"tv",
-        "being in nature":"nature","journaling":"journalbook",
-        "talking to others":"talk"]
+    let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
+    "Playing with Pets":"pets","Creating art":"paint",
+    "Exercise":"exercise","Watching media":"tv",
+    "Being in nature":"nature","Journaling":"draw",
+    "Talking":"talk","Other":"ellipsis"]
         
         var moods = [UIButton]()
         var selectedMood = 0
         let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
-        
-        var newActivities = [String]()
-        var currentActivities = [String]()
+
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -78,51 +76,11 @@ class HomeVC: UIViewController {
                 guard let quotesDict = json as? [String: [[String: String]]] else { return }
                 
                 let index = Int.random(in: 0...quotesDict.values.count)
-                //var q = quotesDict.values.randomElement()
-                //var q = quotesDict.values.
-                //quote.text = quotesDict.values.randomElement()
                 let q = quotesDict["quotes"]![index]
                 quote.text = q["quote"]! + " -" + q["author"]!
-                /*guard let all = quotesDict["quote"] as? [String: Any] else {
-                    print("not an array of dictionaries")
-                    return
-                }*/
-                
-                
-                //let data = try Data(contentsOf: url)
-                //let quotesArray = try! JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: url)), options: JSONSerialization.ReadingOptions()) as? [Any]
-                
-                //var finalQuoteArray:[String] = []
-                //var finalAuthorArray:[String] = []
-                //var finalArray: [item] = []
-                //print(quotesArray?[0])
-                
-                /*for dict in quotesArray! {
-                    //var quote: item
-                    
-                    if let dict = quotesArray as? [String: Any], let quoteArr = dict["quote"] as? [String] {
-                        //quote.quote = quoteArr
-                        finalQuoteArray.append(contentsOf: quoteArr)
-                    }
-                    if let dict = quotesArray as? [String: Any], let authorArr = dict["author"] as? [String] {
-                        finalAuthorArray.append(contentsOf: authorArr)
-                        //quote.author = authorArr
-                    }
-                }*/
-                //let num = finalQuoteArray.count
-                //quote.text = finalQuoteArray[Int.random(in: 0...num)]
-                
-                //let decoder = JSONDecoder()
-                //let model = try decoder.decode([item].self, from: data)
-                //print(model.count)
-                
-                //var json = try? JSONSerialization.jsonObject(with: data)
-                
-                //print(json)
             } catch {
                 print(error)
             }
-            //quote.text
         }
         
         func retrieveUserSpecificActivities(){
@@ -132,25 +90,33 @@ class HomeVC: UIViewController {
             
             profileData.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    self.newActivities = document.data()!["newActivities"] as! Array<String>
-                    self.currentActivities = document.data()!["currentActivities"] as! Array<String>
+                    var activities = [String]()
+                    activities = document.data()!["newActivities"] as! Array<String>
+                    let currentActivities = document.data()!["currentActivities"] as! Array<String>
+                    activities.append(contentsOf:currentActivities)
+                    if (activities.count > 0){
+                        self.promptUserActivity(options: activities)
+                    }
+                    else {
+                        self.promptRandomActivity()
+                    }
                     
               }
             }
-            newActivities.append(contentsOf: currentActivities)
-            let ind = Int.random(in: 0...newActivities.count)
-            if(newActivities.count==0) {
-                let str = descToImage.keys.randomElement()
-                rec.text = "Try " + str! + " today!"
-                //print(descToImage[str])
-                recImage.image = UIImage(named: descToImage[str!]!)
-            } else {
-            let activity = newActivities[ind]
-            rec.text = "Try: " + activity + " today!"
-            //let pic = descToImage[activity]!
+        }
+    
+        func promptUserActivity(options:[String]){
+            let ind = Int.random(in: 0...options.count)
+            let activity = options[ind]
+            rec.text = "Try " + activity + " today!"
             recImage.image = UIImage(named: descToImage[activity]!)
-            }
-           
+            
+        }
+        
+        func promptRandomActivity(){
+            let str = descToImage.keys.randomElement()
+            rec.text = "Try " + str! + " today!"
+            recImage.image = UIImage(named: descToImage[str!]!)
         }
         
         @IBAction func setMood(_ sender: UIButton) {

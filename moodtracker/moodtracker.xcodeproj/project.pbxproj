@@ -11,6 +11,7 @@
 		0725CD06244BB0C30071F3CD /* DetailedMoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */; };
 		075706B6244E6E3200269D27 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075706B5244E6E3200269D27 /* Reachability.swift */; };
 		0777191D244BC3070084AA49 /* DailyActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */; };
+		078EE133244E96A100A5DE7C /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EE132244E96A100A5DE7C /* heart.png */; };
 		07903BB824230A1D004238A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BB724230A1D004238A0 /* AppDelegate.swift */; };
 		07903BBA24230A1D004238A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BB924230A1D004238A0 /* SceneDelegate.swift */; };
 		07903BBC24230A1D004238A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BBB24230A1D004238A0 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMoodVC.swift; sourceTree = "<group>"; };
 		075706B5244E6E3200269D27 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitiesVC.swift; sourceTree = "<group>"; };
+		078EE132244E96A100A5DE7C /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		07903BB424230A1D004238A0 /* moodtracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodtracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07903BB724230A1D004238A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07903BB924230A1D004238A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				07FEE6EF244B91CC00758D38 /* home.png */,
 				07FEE6F0244B91CC00758D38 /* person.png */,
 				07FEE6F1244B91CC00758D38 /* cook.png */,
+				078EE132244E96A100A5DE7C /* heart.png */,
 				07FEE6F2244B91CC00758D38 /* lotus.psd */,
 				07FEE6F3244B91CC00758D38 /* read.png */,
 				07FEE6F4244B91CC00758D38 /* journalbook.png */,
@@ -277,6 +280,7 @@
 				07FEE708244B91CD00758D38 /* lotus.psd in Resources */,
 				07FEE716244B91CD00758D38 /* high.png in Resources */,
 				07FEE713244B91CD00758D38 /* highest.png in Resources */,
+				078EE133244E96A100A5DE7C /* heart.png in Resources */,
 				07FEE714244B91CD00758D38 /* low.png in Resources */,
 				BE10984B244E363600780CAC /* quotes.json in Resources */,
 				07FEE703244B91CD00758D38 /* bubble.png in Resources */,

@@ -29,10 +29,15 @@ extension CalendarViewController: JTACMonthViewDataSource {
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
-
-        let startDate = formatter.date(from: "2020 04 01")!
         let endDate = Date()
-        return ConfigurationParameters(startDate: startDate, endDate: endDate, generateInDates: .forAllMonths,
+        let comp: DateComponents = Calendar.current.dateComponents([.year, .month], from: endDate)
+        let startDate = formatter.date(from: formatter.string(from: Calendar.current.date(from: comp)!))
+        
+
+//        let startDate = formatter.date(from: "2020 04 01")!
+        
+        
+        return ConfigurationParameters(startDate: startDate!, endDate: endDate, generateInDates: .forAllMonths,
         generateOutDates: .tillEndOfGrid)
     }
 }
