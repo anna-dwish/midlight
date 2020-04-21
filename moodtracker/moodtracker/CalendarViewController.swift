@@ -13,6 +13,10 @@ import JTAppleCalendar
 class CalendarViewController: UIViewController {
 //    @IBOutlet weak var currentMonth: UILabel!
     var selectedDate = ""
+    var firstView = true
+    var todayCell:DateCell? = nil
+    let moods = ["lowest","low","middle","high","highest"]
+    
     @IBOutlet weak var calendarView: JTACMonthView!
     
 //    var todayCell:JTACDayCell? = nil
@@ -24,7 +28,40 @@ class CalendarViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("CALLED viewWillAppear")
-        calendarView.reloadDates([Date()])
+        if firstView {
+            firstView = false
+            return
+        }
+        if !Reachability.isConnectedToNetwork(){
+            displayConnectionAlert()
+            return
+        }
+        print("Trying to update today...")
+        if todayCell != nil {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let dateString = "2020-04-21"
+            let dailyMoodData = generateDocumentName(dateOfCell:dateString)
+            dailyMoodData.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let moodName = self.moods[document.data()!["mood"] as! Int]
+                    self.todayCell!.dailyMood.image = UIImage(named:moodName)
+               }
+            }
+        }
+        
+    }
+    
+    func displayConnectionAlert(){
+        let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+        alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert1, animated: true)
+    }
+    
+    func generateDocumentName(dateOfCell:String) -> DocumentReference{
+        let db = Firestore.firestore()
+        let userID = Auth.auth().currentUser?.uid
+        return(db.collection(userID!).document(dateOfCell))
     }
 
 }
@@ -54,7 +91,7 @@ extension CalendarViewController: JTACMonthViewDelegate {
     
     
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
-        let moods = ["lowest","low","middle","high","highest"]
+        
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath) as! DateCell
         
         cell.dateLabel.text = cellState.text
@@ -70,30 +107,18 @@ extension CalendarViewController: JTACMonthViewDelegate {
 
         dailyMoodData.getDocument { (document, error) in
             if let document = document, document.exists {
-                let moodName = moods[document.data()!["mood"] as! Int]
+                let moodName = self.moods[document.data()!["mood"] as! Int]
                 cell.segueButton.isEnabled = true
                 cell.dailyMood.image = UIImage(named:moodName)
                 cell.segueButton.setTitle(dateString, for: UIControl.State.normal)
                 cell.segueButton.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
            }
         }
+        if dateString == "2020-04-21"{
+            todayCell = cell
+        }
         self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)
-//        if date == Date(){
-//            todayCell = cell
-//        }
         return cell
-    }
-    
-    func displayConnectionAlert(){
-        let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
-        alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert1, animated: true)
-    }
-    
-    func generateDocumentName(dateOfCell:String) -> DocumentReference{
-        let db = Firestore.firestore()
-        let userID = Auth.auth().currentUser?.uid
-        return(db.collection(userID!).document(dateOfCell))
     }
     
     
