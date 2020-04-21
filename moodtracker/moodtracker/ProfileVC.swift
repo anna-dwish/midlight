@@ -42,10 +42,16 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Auth.auth().signIn(withEmail: "ard51@duke.edu", password: "midlight")
+        
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
-        retrieveUserInfo()
         acts = [actOne,actTwo,actThree,actFour,actFive,actSix, actSeven,actEight,actNine,actTen]
+        if !Reachability.isConnectedToNetwork(){
+            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert1, animated: true)
+            return
+        }
+        retrieveUserInfo()
         // Do any additional setup after loading the view.
     }
     

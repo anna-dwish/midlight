@@ -25,6 +25,12 @@ class ProfileCreatorVC: UIViewController {
             inputAid.text = "Please enter a valid name"
             return
         }
+        else if !Reachability.isConnectedToNetwork(){
+            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert1, animated: true)
+            return
+        }
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = userName.text
         changeRequest?.commitChanges { (error) in

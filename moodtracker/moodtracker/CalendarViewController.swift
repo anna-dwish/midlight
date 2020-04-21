@@ -44,7 +44,12 @@ extension CalendarViewController: JTACMonthViewDelegate {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath) as! DateCell
         
         cell.dateLabel.text = cellState.text
-        
+        if !Reachability.isConnectedToNetwork(){
+            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert1, animated: true)
+            return cell
+        }
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let dateString = formatter.string(from:date)
@@ -110,6 +115,12 @@ extension CalendarViewController: JTACMonthViewDelegate {
     
     
     @objc func buttonAction(sender: UIButton!) {
+      if !Reachability.isConnectedToNetwork(){
+          let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+          alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+          self.present(alert1, animated: true)
+          return
+      }
       selectedDate = sender.title(for:UIControl.State.normal)!
       performSegue(withIdentifier:"monthToDay",sender:self)
     }

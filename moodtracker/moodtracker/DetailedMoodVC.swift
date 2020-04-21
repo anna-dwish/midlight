@@ -38,6 +38,12 @@ class DetailedMoodVC: UIViewController {
         super.viewDidLoad()
         dateOfEntry.text = dateOfMood
         acts = [actOne,actTwo,actThree,actFour,actFive,actSix, actSeven,actEight,actNine,actTen]
+        if !Reachability.isConnectedToNetwork(){
+            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
+            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert1, animated: true)
+            return
+        }
         displayEntryData()
     }
     

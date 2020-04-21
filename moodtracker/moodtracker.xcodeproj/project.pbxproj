@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0725CD04244BA5200071F3CD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725CD03244BA5200071F3CD /* HomeVC.swift */; };
 		0725CD06244BB0C30071F3CD /* DetailedMoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */; };
+		075706B6244E6E3200269D27 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075706B5244E6E3200269D27 /* Reachability.swift */; };
 		0777191D244BC3070084AA49 /* DailyActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */; };
 		07903BB824230A1D004238A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BB724230A1D004238A0 /* AppDelegate.swift */; };
 		07903BBA24230A1D004238A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07903BB924230A1D004238A0 /* SceneDelegate.swift */; };
@@ -57,6 +58,7 @@
 		039379169CC4A5E3A84B23CB /* Pods-moodtracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moodtracker.release.xcconfig"; path = "Target Support Files/Pods-moodtracker/Pods-moodtracker.release.xcconfig"; sourceTree = "<group>"; };
 		0725CD03244BA5200071F3CD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMoodVC.swift; sourceTree = "<group>"; };
+		075706B5244E6E3200269D27 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitiesVC.swift; sourceTree = "<group>"; };
 		07903BB424230A1D004238A0 /* moodtracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodtracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07903BB724230A1D004238A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				07903BB724230A1D004238A0 /* AppDelegate.swift */,
+				075706B5244E6E3200269D27 /* Reachability.swift */,
 				07903BB924230A1D004238A0 /* SceneDelegate.swift */,
 				07903BBB24230A1D004238A0 /* ViewController.swift */,
 				07903BBD24230A1D004238A0 /* Main.storyboard */,
@@ -355,6 +358,7 @@
 				0777191D244BC3070084AA49 /* DailyActivitiesVC.swift in Sources */,
 				07BEFFD5244AA8BB0079F333 /* ProfileCreatorVC.swift in Sources */,
 				07BEFFCF244A98860079F333 /* NewActivitiesVC.swift in Sources */,
+				075706B6244E6E3200269D27 /* Reachability.swift in Sources */,
 				07BEFFD9244AC0C70079F333 /* ProfileVC.swift in Sources */,
 				07903BBC24230A1D004238A0 /* ViewController.swift in Sources */,
 				07BEFFC9244A50700079F333 /* SignInVC.swift in Sources */,
