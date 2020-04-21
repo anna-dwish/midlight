@@ -9,6 +9,8 @@ import Firebase
 import UIKit
 
 class HomeVC: UIViewController {
+    var counter = 0 //used to make sure the pop up alert only happens one time after the home page is visited
+    
     @IBOutlet weak var moodOne: UIButton!
     @IBOutlet weak var moodTwo: UIButton!
     @IBOutlet weak var moodThree: UIButton!
@@ -37,6 +39,27 @@ class HomeVC: UIViewController {
             getQuote()
             moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
             retrieveUserSpecificActivities()
+        }
+    
+        override func viewDidAppear(_ animated: Bool) {
+            //alert to go to update daily log when home page opened for the first time
+            if (counter == 0){
+                createAlert(title: "Daily Log", message: "Remember to log your mood today!")
+                counter = 1
+            }
+        }
+        
+    //creates the alert to show on home page
+        func createAlert (title: String, message: String){
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
         func getQuote() {
