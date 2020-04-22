@@ -41,10 +41,6 @@ class HomeVC: UIViewController {
     
         override func viewDidAppear(_ animated: Bool) {
             currentMoodIsAvailable()
-            if !receivedMoodInput {
-                createAlert(title: "Daily Log", message: "Remember to log your mood today!")
-                receivedMoodInput = true
-            }
         }
     
         func currentMoodIsAvailable() {
@@ -57,10 +53,9 @@ class HomeVC: UIViewController {
                 if let document = document, document.exists {
                     let selected = self.moods[document.data()!["mood"] as! Int]
                     selected.backgroundColor = self.SELECTED
-                    self.receivedMoodInput = true
                }
-                else{
-                    self.receivedMoodInput = false
+                else {
+                    self.createAlert(title: "Daily Log", message: "Remember to log your mood today!")
                 }
             }
         }
