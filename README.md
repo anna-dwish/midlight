@@ -12,6 +12,7 @@
 5. Motivating/humorous quote that changes each day to encourage positive thinking
 6. A resource page of professional contacts for emergent situations
 7. A calendar view to track their mental health progress for the month
+8. Display constraints: iPhone 8 and any form of iPhone 11 on portrait lock orientation
 
 ## Overall Architecture
 1. Tab View with 5 options: information, journal, home, calendar, & profile
@@ -26,7 +27,7 @@ We are hoping to target people who wish to become more in tune with their mental
 
 ## Contributions
 1. Zoe Superville: Developed initial wireframe, designed general UI for tab views, improved segues between views, developed daily notification + initial permission prompt for access to notifying users
-2. Kassen Qian: Developed initial figma mockups, designed UI themes & initial questionnaire, developed calendar UI, designed app icon, + tested changed daily mood inputs
+2. Kassen Qian: Developed initial figma mockups, designed UI themes & initial questionnaire, developed calendar UI, designed and implemented app icon, + tested changed daily mood inputs and connectivity
 3. Laura Li: Researched survey questions and activities pertaining to mental health, developed JSON parsing for daily motivational quote, used database to prompt users with a personalized daily activity recommendation, + designed home page
 4. Anna Darwish: Developed database integration for user authentication + daily data input + historical/profile information with Firebase, implemented error checking for poor input when creating a new profile, implemented network connectivity alerts, integrated JTAppleCalendar pod into project, designed detail calendar UI view and sigin in/sign up views, + tested connectivity and earlier daily logs of users
 
