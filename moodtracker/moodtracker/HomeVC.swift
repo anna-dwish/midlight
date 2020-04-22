@@ -116,14 +116,14 @@ class HomeVC: UIViewController {
         func promptUserActivity(options:[String]){
             let ind = Int.random(in: 0..<options.count)
             let activity = options[ind]
-            rec.text = "Try " + activity + " today!"
+            rec.text = "Try " + activity.lowercased() + " today!"
             recImage.image = UIImage(named: descToImage[activity]!)
             
         }
         
         func promptRandomActivity(){
             let str = descToImage.keys.randomElement()
-            rec.text = "Try " + str! + " today!"
+            rec.text = "Try " + str!.lowercased() + " today!"
             recImage.image = UIImage(named: descToImage[str!]!)
         }
         
