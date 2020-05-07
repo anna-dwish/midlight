@@ -31,6 +31,4 @@ We are hoping to target people who wish to become more in tune with their mental
 3. Laura Li: Researched survey questions and activities pertaining to mental health, developed JSON parsing for daily motivational quote, used database to prompt users with a personalized daily activity recommendation, + designed home page
 4. Anna Darwish: Developed database integration for user authentication + daily data input + historical/profile information with Firebase, implemented error checking for poor input when creating a new profile, implemented network connectivity alerts, integrated JTAppleCalendar pod into project, designed detail calendar UI view and sigin in/sign up views, + tested connectivity and earlier daily logs of users
 
-Watch our Midlight video presentation at this link: https://youtu.be/RhZVx3P5IRM 
-
 
