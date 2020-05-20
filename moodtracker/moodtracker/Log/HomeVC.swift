@@ -72,25 +72,25 @@ class HomeVC: UIViewController {
         
         func getQuote() {
             
-            struct item: Codable {
-                var quote: String
-                var author: String
-            }
-            
-            do {
-                let path = Bundle.main.path(forResource: "quotes", ofType: "json")!
-                let url = URL(fileURLWithPath: path)
-                let data = try Data(contentsOf: url)
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                
-                guard let quotesDict = json as? [String: [[String: String]]] else { return }
-                
-                let index = Int.random(in: 0...quotesDict.values.count)
-                let q = quotesDict["quotes"]![index]
-                quote.text = q["quote"]! + " -" + q["author"]!
-            } catch {
-                print(error)
-            }
+//            struct item: Codable {
+//                var quote: String
+//                var author: String
+//            }
+//            
+//            do {
+//                let path = Bundle.main.path(forResource: "quotes", ofType: "json")!
+//                let url = URL(fileURLWithPath: path)
+//                let data = try Data(contentsOf: url)
+//                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+//                
+//                guard let quotesDict = json as? [String: [[String: String]]] else { return }
+//                
+//                let index = Int.random(in: 0...quotesDict.values.count)
+//                let q = quotesDict["quotes"]![index]
+//                quote.text = q["quote"]! + " -" + q["author"]!
+//            } catch {
+//                print(error)
+//            }
         }
         
         func retrieveUserSpecificActivities(){

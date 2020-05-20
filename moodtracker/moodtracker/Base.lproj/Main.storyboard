@@ -849,10 +849,10 @@
             </objects>
             <point key="canvasLocation" x="6703" y="138"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--CalendarVC-->
         <scene sceneID="BO2-Fd-cFC">
             <objects>
-                <viewController id="M3y-3p-zy5" customClass="CalendarViewController" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M3y-3p-zy5" customClass="CalendarVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mjk-Ag-The">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

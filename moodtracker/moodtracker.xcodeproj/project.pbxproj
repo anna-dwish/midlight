@@ -27,7 +27,7 @@
 		07BEFFD7244AAF160079F333 /* WelcomeQuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */; };
 		07BEFFD9244AC0C70079F333 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFD8244AC0C70079F333 /* ProfileVC.swift */; };
 		07C4AE11243FF2C5007C2C4B /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C4AE10243FF2C5007C2C4B /* DateCell.swift */; };
-		07E25E2C244027510093F184 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E25E2B244027510093F184 /* CalendarViewController.swift */; };
+		07E25E2C244027510093F184 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E25E2B244027510093F184 /* CalendarVC.swift */; };
 		07F1D2C0244A4C0300A9CBAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */; };
 		07FEE701244B91CD00758D38 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6EB244B91CC00758D38 /* info.png */; };
 		07FEE702244B91CD00758D38 /* tv.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6EC244B91CC00758D38 /* tv.png */; };
@@ -79,7 +79,7 @@
 		07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeQuestionnaireVC.swift; sourceTree = "<group>"; };
 		07BEFFD8244AC0C70079F333 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		07C4AE10243FF2C5007C2C4B /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
-		07E25E2B244027510093F184 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		07E25E2B244027510093F184 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07FEE6EB244B91CC00758D38 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		07FEE6EC244B91CC00758D38 /* tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tv.png; sourceTree = "<group>"; };
@@ -143,30 +143,70 @@
 			children = (
 				07903BB724230A1D004238A0 /* AppDelegate.swift */,
 				075706B5244E6E3200269D27 /* Reachability.swift */,
+				07A5E6CD2475F19500A3D6EF /* Profile */,
 				07903BB924230A1D004238A0 /* SceneDelegate.swift */,
+				07A5E6CA2475EEF800A3D6EF /* Questionnaire */,
 				07903BBB24230A1D004238A0 /* ViewController.swift */,
 				07903BBD24230A1D004238A0 /* Main.storyboard */,
-				0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */,
-				0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */,
-				0725CD03244BA5200071F3CD /* HomeVC.swift */,
+				07A5E6CE2475F1DC00A3D6EF /* Log */,
+				07A5E6CC2475F16300A3D6EF /* Authentication */,
+				07A5E6CB2475F0D900A3D6EF /* Calendar */,
 				BE10984A244E363600780CAC /* quotes.json */,
-				07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */,
-				07BEFFD0244AA1060079F333 /* MoodVC.swift */,
-				07BEFFCC244A812E0079F333 /* CurrentActivitiesVC.swift */,
-				07BEFFCE244A98860079F333 /* NewActivitiesVC.swift */,
-				07BEFFCA244A60C60079F333 /* CreateAccountVC.swift */,
-				07BEFFC8244A50700079F333 /* SignInVC.swift */,
 				07FEE6EA244B91CC00758D38 /* mediaHyde */,
 				07903BC024230A22004238A0 /* Assets.xcassets */,
 				07903BC224230A22004238A0 /* LaunchScreen.storyboard */,
 				07903BC524230A22004238A0 /* Info.plist */,
 				07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */,
-				07C4AE10243FF2C5007C2C4B /* DateCell.swift */,
-				07E25E2B244027510093F184 /* CalendarViewController.swift */,
-				07BEFFD4244AA8BB0079F333 /* ProfileCreatorVC.swift */,
-				07BEFFD8244AC0C70079F333 /* ProfileVC.swift */,
 			);
 			path = moodtracker;
+			sourceTree = "<group>";
+		};
+		07A5E6CA2475EEF800A3D6EF /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */,
+				07BEFFCC244A812E0079F333 /* CurrentActivitiesVC.swift */,
+				07BEFFCE244A98860079F333 /* NewActivitiesVC.swift */,
+				07BEFFD0244AA1060079F333 /* MoodVC.swift */,
+				07BEFFD4244AA8BB0079F333 /* ProfileCreatorVC.swift */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		07A5E6CB2475F0D900A3D6EF /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				07C4AE10243FF2C5007C2C4B /* DateCell.swift */,
+				07E25E2B244027510093F184 /* CalendarVC.swift */,
+				0725CD05244BB0C30071F3CD /* DetailedMoodVC.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		07A5E6CC2475F16300A3D6EF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				07BEFFCA244A60C60079F333 /* CreateAccountVC.swift */,
+				07BEFFC8244A50700079F333 /* SignInVC.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		07A5E6CD2475F19500A3D6EF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				07BEFFD8244AC0C70079F333 /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		07A5E6CE2475F1DC00A3D6EF /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				0777191C244BC3070084AA49 /* DailyActivitiesVC.swift */,
+				0725CD03244BA5200071F3CD /* HomeVC.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		07FEE6EA244B91CC00758D38 /* mediaHyde */ = {
@@ -358,7 +398,7 @@
 			files = (
 				07BEFFCB244A60C60079F333 /* CreateAccountVC.swift in Sources */,
 				0725CD04244BA5200071F3CD /* HomeVC.swift in Sources */,
-				07E25E2C244027510093F184 /* CalendarViewController.swift in Sources */,
+				07E25E2C244027510093F184 /* CalendarVC.swift in Sources */,
 				0777191D244BC3070084AA49 /* DailyActivitiesVC.swift in Sources */,
 				07BEFFD5244AA8BB0079F333 /* ProfileCreatorVC.swift in Sources */,
 				07BEFFCF244A98860079F333 /* NewActivitiesVC.swift in Sources */,
