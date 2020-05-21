@@ -52,7 +52,6 @@
 		07FEE715244B91CD00758D38 /* middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6FF244B91CC00758D38 /* middle.png */; };
 		07FEE716244B91CD00758D38 /* high.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE700244B91CC00758D38 /* high.png */; };
 		3EA0F5F055125AD5E44C77A6 /* Pods_moodtracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0E415D65E346C35E4CF7A9 /* Pods_moodtracker.framework */; };
-		BE10984B244E363600780CAC /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = BE10984A244E363600780CAC /* quotes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,7 +104,6 @@
 		07FEE700244B91CC00758D38 /* high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = high.png; sourceTree = "<group>"; };
 		3353B9A2FA7F363697A8721C /* Pods-moodtracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moodtracker.debug.xcconfig"; path = "Target Support Files/Pods-moodtracker/Pods-moodtracker.debug.xcconfig"; sourceTree = "<group>"; };
 		6B0E415D65E346C35E4CF7A9 /* Pods_moodtracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moodtracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE10984A244E363600780CAC /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +149,6 @@
 				07A5E6CE2475F1DC00A3D6EF /* Log */,
 				07A5E6CC2475F16300A3D6EF /* Authentication */,
 				07A5E6CB2475F0D900A3D6EF /* Calendar */,
-				BE10984A244E363600780CAC /* quotes.json */,
 				07FEE6EA244B91CC00758D38 /* mediaHyde */,
 				07903BC024230A22004238A0 /* Assets.xcassets */,
 				07903BC224230A22004238A0 /* LaunchScreen.storyboard */,
@@ -322,7 +319,6 @@
 				07FEE713244B91CD00758D38 /* highest.png in Resources */,
 				078EE133244E96A100A5DE7C /* heart.png in Resources */,
 				07FEE714244B91CD00758D38 /* low.png in Resources */,
-				BE10984B244E363600780CAC /* quotes.json in Resources */,
 				07FEE703244B91CD00758D38 /* bubble.png in Resources */,
 				07FEE70D244B91CD00758D38 /* nature.png in Resources */,
 				07F1D2C0244A4C0300A9CBAB /* GoogleService-Info.plist in Resources */,

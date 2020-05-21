@@ -7,6 +7,7 @@
 //
 import Firebase
 import UIKit
+import SystemConfiguration
 
 class HomeVC: UIViewController {
         var counter = 0 //used to make sure the pop up alert only happens one time after the home page is visited
@@ -71,27 +72,27 @@ class HomeVC: UIViewController {
         }
         
         func getQuote() {
+            var request = URLRequest(url: URL(string: "https://quotes.rest/qod")!)
+            request.httpMethod = "GET"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            request.addValue("YOUR API KEY HERE", forHTTPHeaderField: "X-TheySaidSo-Api-Secret")
             
-//            struct item: Codable {
-//                var quote: String
-//                var author: String
-//            }
-//            
-//            do {
-//                let path = Bundle.main.path(forResource: "quotes", ofType: "json")!
-//                let url = URL(fileURLWithPath: path)
-//                let data = try Data(contentsOf: url)
-//                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-//                
-//                guard let quotesDict = json as? [String: [[String: String]]] else { return }
-//                
-//                let index = Int.random(in: 0...quotesDict.values.count)
-//                let q = quotesDict["quotes"]![index]
-//                quote.text = q["quote"]! + " -" + q["author"]!
-//            } catch {
-//                print(error)
-//            }
-        }
+            URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
+                do {
+           
+                    let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                    let metaDictionary = jsonDictionary!["contents"] as? [String: Any]
+                    let entry = metaDictionary!["quotes"] as? NSArray
+                    let entryDictionary = entry![0] as? [String:Any]
+                    self.quote.text = entryDictionary!["quote"] as? String
+                } catch {
+                    print("JSON Serialization error")
+                }
+            }).resume()
+            
+            }
+        
         
         func retrieveUserSpecificActivities(){
             let profileData = getProfileDocument()
