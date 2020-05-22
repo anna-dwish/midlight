@@ -100,24 +100,6 @@ class HomeVC: UIViewController {
                 }
             }
             task.resume()
-//            var request = URLRequest(url: URL(string: "https://quotes.rest/qod")!)
-//            request.httpMethod = "GET"
-//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//            request.addValue("application/json", forHTTPHeaderField: "Accept")
-//            request.addValue("YOUR API KEY HERE", forHTTPHeaderField: "X-TheySaidSo-Api-Secret")
-//
-//            URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
-//                do {
-//
-//                    let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-//                    let metaDictionary = jsonDictionary!["contents"] as? [String: Any]
-//                    let entry = metaDictionary!["quotes"] as? NSArray
-//                    let entryDictionary = entry![0] as? [String:Any]
-//                    self.quote.text = entryDictionary!["quote"] as? String
-//                } catch {
-//                    print("JSON Serialization error")
-//                }
-//            }).resume()
             
             }
         
