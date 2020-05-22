@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G2v-Uu-cJo">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xIv-9I-Tjf">
+            <objects>
+                <navigationController id="G2v-Uu-cJo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sbf-GC-qmD">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3C9-WT-h9w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9Q-X7-SXd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143" y="855"/>
+        </scene>
         <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -46,12 +62,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midlight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V5-D6-dPm">
-                                <rect key="frame" x="33.666666666666657" y="225.66666666666663" width="308" height="101"/>
+                                <rect key="frame" x="33.666666666666657" y="271" width="308" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="ImT-kC-ZBu"/>
+                                    <constraint firstAttribute="height" constant="60" id="ImT-kC-ZBu"/>
                                     <constraint firstAttribute="width" constant="308" id="i5n-C3-rwZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus" translatesAutoresizingMaskIntoConstraints="NO" id="F1a-Wv-sWT">
-                                <rect key="frame" x="87.666666666666686" y="86" width="200" height="120"/>
+                                <rect key="frame" x="87.666666666666686" y="146" width="200" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="9Li-SN-odz"/>
                                     <constraint firstAttribute="width" constant="200" id="bO9-kf-Nns"/>
@@ -109,18 +125,18 @@
                                     <color key="titleColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DbN-QS-vHE" kind="presentation" modalPresentationStyle="fullScreen" id="AXC-d1-xHK"/>
+                                    <segue destination="DbN-QS-vHE" kind="show" id="AXC-d1-xHK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0V5-D6-dPm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-130" id="1k8-ON-OV3"/>
+                            <constraint firstItem="0V5-D6-dPm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-105" id="1k8-ON-OV3"/>
                             <constraint firstItem="Ak1-5Q-kes" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3bq-7q-wX6"/>
                             <constraint firstItem="xlg-sa-aqR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="83.5" id="APo-rD-8HH"/>
                             <constraint firstItem="Ak1-5Q-kes" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="CBQ-9p-Cnt"/>
                             <constraint firstItem="Xx6-yC-xcV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dc3-W6-bqu"/>
-                            <constraint firstItem="F1a-Wv-sWT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-260" id="FfS-5g-zvO"/>
+                            <constraint firstItem="F1a-Wv-sWT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="FfS-5g-zvO"/>
                             <constraint firstItem="4sV-iR-G7J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="PSN-0v-5pR"/>
                             <constraint firstItem="mCZ-Su-gxS" firstAttribute="top" secondItem="Hiz-Ib-aYd" secondAttribute="bottom" constant="8" id="Tve-nM-1Rf"/>
                             <constraint firstItem="0V5-D6-dPm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U4j-p9-0C2"/>
@@ -173,7 +189,7 @@
                                     <constraint firstAttribute="height" constant="109" id="jQ3-4d-9pc"/>
                                     <constraint firstAttribute="width" constant="308" id="tiw-pT-aIl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -842,17 +858,17 @@
                         <outlet property="finishProfile" destination="WK5-Hg-GSZ" id="3gl-MA-yll"/>
                         <outlet property="inputAid" destination="SHd-8c-9ei" id="K7t-0l-Hrq"/>
                         <outlet property="userName" destination="iGt-j7-NUf" id="QCR-Oh-9Wl"/>
-                        <segue destination="GnI-G8-HIH" kind="modal" identifier="loginNewUser" modalPresentationStyle="fullScreen" id="7g5-9M-5oU"/>
+                        <segue destination="GnI-G8-HIH" kind="presentation" identifier="loginNewUser" id="7g5-9M-5oU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dak-ea-hGI" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6703" y="138"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--Calendar-->
         <scene sceneID="BO2-Fd-cFC">
             <objects>
-                <viewController id="M3y-3p-zy5" customClass="CalendarViewController" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M3y-3p-zy5" customClass="CalendarVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mjk-Ag-The">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -954,14 +970,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bxV-Zu-I4u"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gyO-QT-lRr"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="journalbook" id="dW4-dh-xEV"/>
                     <connections>
                         <segue destination="c2L-NZ-UeK" kind="show" identifier="monthToDay" id="JdA-g8-Idd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvJ-26-qJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3305.7971014492755" y="2779.076086956522"/>
+            <point key="canvasLocation" x="3305" y="2004"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="YpD-BK-AEk">
@@ -1127,44 +1143,15 @@
                                     <action selector="enableAccount" destination="DbN-QS-vHE" eventType="touchUpInside" id="L53-1h-YkI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-3F-5Jx">
-                                <rect key="frame" x="55.666666666666657" y="648" width="264" height="74"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="264" id="ffQ-iD-P5Q"/>
-                                    <constraint firstAttribute="height" constant="74" id="vgc-ml-WeA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
-                                <state key="normal" title="Already have an account?">
-                                    <color key="titleColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ffQ-iD-P5Q"/>
-                                        <exclude reference="vgc-ml-WeA"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="ffQ-iD-P5Q"/>
-                                        <include reference="vgc-ml-WeA"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" modalPresentationStyle="fullScreen" id="jYy-mJ-ar8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="T0v-Nr-DjH" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="3Cp-Y4-wDb"/>
                             <constraint firstItem="k9C-Jq-F8o" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="105" id="4IE-qn-6NG"/>
                             <constraint firstItem="MCp-Qg-Nwp" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="5sb-fF-Ajk"/>
-                            <constraint firstItem="ukg-3F-5Jx" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="279" id="7E0-Yq-0HD"/>
                             <constraint firstItem="vPS-zI-tum" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="8FZ-3Q-2ni"/>
                             <constraint firstItem="UY4-av-jdb" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="9Hd-8q-8Jp"/>
                             <constraint firstItem="gji-S6-b0c" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="205" id="D53-sh-Y4i"/>
-                            <constraint firstItem="ukg-3F-5Jx" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="FHK-On-dv6"/>
                             <constraint firstItem="5uZ-7P-hKa" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="I5Z-AK-U2n"/>
                             <constraint firstItem="4SF-bp-4uy" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="KIq-eg-ZJ1"/>
                             <constraint firstItem="MCp-Qg-Nwp" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="20" id="MFP-kp-bbE"/>
@@ -1187,12 +1174,12 @@
                         <outlet property="createAccountAid" destination="5uZ-7P-hKa" id="ffG-S4-wJM"/>
                         <outlet property="email" destination="UY4-av-jdb" id="4KS-n3-UO8"/>
                         <outlet property="password" destination="4SF-bp-4uy" id="aQz-S1-nlI"/>
-                        <segue destination="KBX-ZL-ePE" kind="modal" identifier="beginQuestionnaire" modalPresentationStyle="fullScreen" id="jp5-TW-rLu"/>
+                        <segue destination="Vjc-OF-bJI" kind="show" identifier="beginQuestionnaire" id="6Z8-Pc-vQq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jd-jR-ad3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="138"/>
+            <point key="canvasLocation" x="2422" y="121"/>
         </scene>
         <!--Info-->
         <scene sceneID="iyl-sa-Uf3">
@@ -1208,7 +1195,7 @@
                                     <constraint firstAttribute="height" constant="80" id="3Am-E2-gll"/>
                                     <constraint firstAttribute="width" constant="308" id="MLM-uH-W3U"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1276,7 +1263,7 @@
                                     <constraint firstAttribute="height" constant="90" id="y1K-Jh-2tV"/>
                                     <constraint firstAttribute="width" constant="308" id="zXv-Et-wB3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1380,16 +1367,6 @@
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJW-a6-UWc">
-                                <rect key="frame" x="131" y="111.66666666666669" width="111" height="109"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="GZc-Y1-Foe"/>
-                                    <constraint firstAttribute="width" constant="111" id="O6A-sB-f2U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-cE-dR0">
                                 <rect key="frame" x="9.6666666666666714" y="371.66666666666669" width="109" height="109"/>
                                 <constraints>
@@ -1398,7 +1375,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Try drawing today!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-sc-Qxy">
-                                <rect key="frame" x="130.66666666666666" y="246.66666666666663" width="239.99999999999997" height="59"/>
+                                <rect key="frame" x="130.66666666666666" y="216.66666666666666" width="239.99999999999997" height="58.999999999999972"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="TPW-xX-bGa"/>
@@ -1409,7 +1386,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="draw" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-XO-6jR">
-                                <rect key="frame" x="9.6666666666666714" y="221.66666666666663" width="109" height="109"/>
+                                <rect key="frame" x="9.6666666666666714" y="191.66666666666666" width="109" height="108.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="109" id="yXt-hV-NIz"/>
                                     <constraint firstAttribute="width" constant="109" id="yia-xJ-So2"/>
@@ -1435,18 +1412,16 @@
                             <constraint firstItem="a0l-c0-MO0" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="FGc-kk-n1N"/>
                             <constraint firstItem="bel-AW-J2K" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="FeX-hJ-8Te"/>
                             <constraint firstItem="8gJ-XO-6jR" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="-123.5" id="LwS-Pu-ZWc"/>
-                            <constraint firstItem="IJW-a6-UWc" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="-1" id="OLz-zk-iKC"/>
                             <constraint firstItem="8YM-7Z-wk4" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="OoU-cL-dwj"/>
                             <constraint firstItem="K8t-NB-M4b" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="62" id="VaD-uy-wY6"/>
                             <constraint firstItem="2pa-1Y-zNW" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" id="a5b-Ac-mzh"/>
                             <constraint firstItem="eOu-cE-dR0" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="20" id="d9c-r3-2Lj"/>
-                            <constraint firstItem="8gJ-XO-6jR" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-130" id="gRb-hY-Emo"/>
+                            <constraint firstItem="8gJ-XO-6jR" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-160" id="gRb-hY-Emo"/>
                             <constraint firstItem="EXn-bv-Oqt" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="120" id="h19-JH-w8X"/>
                             <constraint firstItem="a0l-c0-MO0" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="-72.5" id="h5K-uJ-Q8j"/>
-                            <constraint firstItem="Ikh-sc-Qxy" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-130" id="h5x-D8-ATs"/>
+                            <constraint firstItem="Ikh-sc-Qxy" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-160" id="h5x-D8-ATs"/>
                             <constraint firstItem="K8t-NB-M4b" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="20" id="jIU-Du-ejl"/>
                             <constraint firstItem="bel-AW-J2K" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="146.5" id="llH-i7-E9P"/>
-                            <constraint firstItem="IJW-a6-UWc" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-240" id="pFr-sA-Zo4"/>
                             <constraint firstItem="aaT-TP-vKb" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="rUm-4f-nYQ"/>
                             <constraint firstItem="8YM-7Z-wk4" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="73.5" id="wKk-bK-emX"/>
                             <constraint firstItem="EXn-bv-Oqt" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" id="wWV-l9-9v0"/>
@@ -1471,24 +1446,6 @@
             </objects>
             <point key="canvasLocation" x="2611.594202898551" y="2003.5714285714284"/>
         </scene>
-        <!--Daily Log-->
-        <scene sceneID="Va0-zs-Psv">
-            <objects>
-                <navigationController id="rSX-Jg-DAN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Daily Log" image="journalbook" id="KdQ-Vt-keK"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wtu-b5-byX">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="M3y-3p-zy5" kind="relationship" relationship="rootViewController" id="F2q-72-UKi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KRs-7A-G3E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3307" y="2004"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="ss6-Za-eQL">
             <objects>
@@ -1498,12 +1455,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-pF-rl3">
-                                <rect key="frame" x="33.666666666666657" y="111.66666666666669" width="308" height="109"/>
+                                <rect key="frame" x="33.666666666666657" y="163.66666666666666" width="308" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="PXs-uR-2jo"/>
-                                    <constraint firstAttribute="height" constant="109" id="rqL-9Q-rIr"/>
+                                    <constraint firstAttribute="height" constant="45" id="rqL-9Q-rIr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1631,7 +1588,7 @@
                             <constraint firstItem="bdI-3H-btE" firstAttribute="centerY" secondItem="sbh-HV-Jvw" secondAttribute="centerY" constant="-101.5" id="36y-oh-JfP"/>
                             <constraint firstItem="CDu-mJ-jvb" firstAttribute="centerY" secondItem="sbh-HV-Jvw" secondAttribute="centerY" constant="-101.5" id="3FE-UF-n3g"/>
                             <constraint firstItem="VRJ-sZ-i3O" firstAttribute="centerX" secondItem="sbh-HV-Jvw" secondAttribute="centerX" constant="73.5" id="3HI-9o-gMQ"/>
-                            <constraint firstItem="UhN-pF-rl3" firstAttribute="centerY" secondItem="sbh-HV-Jvw" secondAttribute="centerY" constant="-240" id="4jV-7b-h2B"/>
+                            <constraint firstItem="UhN-pF-rl3" firstAttribute="centerY" secondItem="sbh-HV-Jvw" secondAttribute="centerY" constant="-220" id="4jV-7b-h2B"/>
                             <constraint firstItem="fTQ-FD-mKp" firstAttribute="centerX" secondItem="sbh-HV-Jvw" secondAttribute="centerX" id="6X1-d0-rnN"/>
                             <constraint firstItem="QOR-mh-yiz" firstAttribute="centerX" secondItem="sbh-HV-Jvw" secondAttribute="centerX" constant="73.5" id="6q7-Ce-raz"/>
                             <constraint firstItem="cqK-3Y-h0Q" firstAttribute="centerX" secondItem="sbh-HV-Jvw" secondAttribute="centerX" constant="-72.5" id="ChI-dt-Sum"/>
@@ -1687,10 +1644,10 @@
             </objects>
             <point key="canvasLocation" x="4061" y="2004"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Manager-->
         <scene sceneID="cyB-Mw-Nck">
             <objects>
-                <tabBarController id="GnI-G8-HIH" sceneMemberID="viewController">
+                <tabBarController id="GnI-G8-HIH" customClass="TabManager" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DS3-5E-QHT"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jP6-DV-qj8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1706,13 +1663,13 @@
                         <segue destination="IcH-0f-2lK" kind="relationship" relationship="viewControllers" id="uUL-S2-fZh"/>
                         <segue destination="irn-vE-MH1" kind="relationship" relationship="viewControllers" id="HLX-Fu-n4Z"/>
                         <segue destination="s9b-5f-wbE" kind="relationship" relationship="viewControllers" id="4M4-W2-Fdp"/>
-                        <segue destination="rSX-Jg-DAN" kind="relationship" relationship="viewControllers" id="OB2-15-bdD"/>
+                        <segue destination="M3y-3p-zy5" kind="relationship" relationship="viewControllers" id="Aav-b5-1Tu"/>
                         <segue destination="OHP-57-6aE" kind="relationship" relationship="viewControllers" id="noO-j6-1nw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4t-g9-ZZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="1032"/>
+            <point key="canvasLocation" x="3130" y="1049"/>
         </scene>
         <!--Title-->
         <scene sceneID="fVL-5J-PBm">
@@ -1722,11 +1679,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please select all of the activities you did today" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-eq-esb">
-                                <rect key="frame" x="48" y="101.66666666666669" width="279" height="69"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please select today's activities" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-eq-esb">
+                                <rect key="frame" x="48" y="138.66666666666666" width="279" height="35"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="96Y-pc-ke4"/>
+                                    <constraint firstAttribute="height" constant="35" id="96Y-pc-ke4"/>
                                     <constraint firstAttribute="width" constant="279" id="MoU-zR-cXX"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1858,7 +1815,7 @@
                         <constraints>
                             <constraint firstItem="saf-Fe-rcO" firstAttribute="centerY" secondItem="GEq-tr-hjJ" secondAttribute="centerY" constant="-44" id="3c4-Uc-IgS"/>
                             <constraint firstItem="og2-Fa-2Bf" firstAttribute="centerY" secondItem="GEq-tr-hjJ" secondAttribute="centerY" constant="190" id="7Jh-BN-qex"/>
-                            <constraint firstItem="iJd-eq-esb" firstAttribute="centerY" secondItem="GEq-tr-hjJ" secondAttribute="centerY" constant="-270" id="84I-O1-fgN"/>
+                            <constraint firstItem="iJd-eq-esb" firstAttribute="centerY" secondItem="GEq-tr-hjJ" secondAttribute="centerY" constant="-250" id="84I-O1-fgN"/>
                             <constraint firstItem="iJd-eq-esb" firstAttribute="centerX" secondItem="GEq-tr-hjJ" secondAttribute="centerX" id="9p0-Zs-xxp"/>
                             <constraint firstItem="CD4-7s-TCx" firstAttribute="centerY" secondItem="GEq-tr-hjJ" secondAttribute="centerY" constant="73" id="CXJ-Ym-6Vy"/>
                             <constraint firstItem="CD4-7s-TCx" firstAttribute="centerX" secondItem="GEq-tr-hjJ" secondAttribute="centerX" constant="92" id="HUM-6f-aNr"/>
@@ -2065,7 +2022,7 @@
                                     <constraint firstAttribute="height" constant="90" id="PIn-32-iia"/>
                                     <constraint firstAttribute="width" constant="308" id="xyE-Vr-8SX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2077,7 +2034,7 @@
                                     <constraint firstAttribute="height" constant="55" id="rx5-cU-UUU"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Abm-tV-3j8">
@@ -2188,30 +2145,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbr-kU-A86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3306" y="3558"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8n6-sK-QkL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KBX-ZL-ePE" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="n7z-BT-mIy"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zXB-O4-RZZ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Vjc-OF-bJI" kind="relationship" relationship="rootViewController" id="b4O-sQ-hsl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q70-1s-8vE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2644.9275362318845" y="137.94642857142856"/>
+            <point key="canvasLocation" x="3305" y="2712"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7g5-9M-5oU"/>
+        <segue reference="sZH-Xb-MZB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cook" width="40" height="40"/>

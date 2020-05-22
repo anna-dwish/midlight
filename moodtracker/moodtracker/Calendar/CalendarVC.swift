@@ -10,7 +10,7 @@ import Firebase
 import UIKit
 import JTAppleCalendar
 
-class CalendarViewController: UIViewController {
+class CalendarVC: UIViewController {
     var selectedDate = ""
     var firstView = true
     var todayCell:DateCell? = nil
@@ -72,7 +72,7 @@ class DateHeader: JTACMonthReusableView  {
     @IBOutlet var monthTitle: UILabel!
 }
 
-extension CalendarViewController: JTACMonthViewDataSource {
+extension CalendarVC: JTACMonthViewDataSource {
 
     
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
@@ -89,7 +89,7 @@ extension CalendarViewController: JTACMonthViewDataSource {
 
 
 
-extension CalendarViewController: JTACMonthViewDelegate {
+extension CalendarVC: JTACMonthViewDelegate {
     
     
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
