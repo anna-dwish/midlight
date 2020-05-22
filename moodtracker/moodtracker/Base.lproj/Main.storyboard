@@ -62,12 +62,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midlight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V5-D6-dPm">
-                                <rect key="frame" x="33.666666666666657" y="225.66666666666663" width="308" height="101"/>
+                                <rect key="frame" x="33.666666666666657" y="271" width="308" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="ImT-kC-ZBu"/>
+                                    <constraint firstAttribute="height" constant="60" id="ImT-kC-ZBu"/>
                                     <constraint firstAttribute="width" constant="308" id="i5n-C3-rwZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus" translatesAutoresizingMaskIntoConstraints="NO" id="F1a-Wv-sWT">
-                                <rect key="frame" x="87.666666666666686" y="86" width="200" height="120"/>
+                                <rect key="frame" x="87.666666666666686" y="146" width="200" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="9Li-SN-odz"/>
                                     <constraint firstAttribute="width" constant="200" id="bO9-kf-Nns"/>
@@ -131,12 +131,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0V5-D6-dPm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-130" id="1k8-ON-OV3"/>
+                            <constraint firstItem="0V5-D6-dPm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-105" id="1k8-ON-OV3"/>
                             <constraint firstItem="Ak1-5Q-kes" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3bq-7q-wX6"/>
                             <constraint firstItem="xlg-sa-aqR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="83.5" id="APo-rD-8HH"/>
                             <constraint firstItem="Ak1-5Q-kes" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="CBQ-9p-Cnt"/>
                             <constraint firstItem="Xx6-yC-xcV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dc3-W6-bqu"/>
-                            <constraint firstItem="F1a-Wv-sWT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-260" id="FfS-5g-zvO"/>
+                            <constraint firstItem="F1a-Wv-sWT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="FfS-5g-zvO"/>
                             <constraint firstItem="4sV-iR-G7J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="PSN-0v-5pR"/>
                             <constraint firstItem="mCZ-Su-gxS" firstAttribute="top" secondItem="Hiz-Ib-aYd" secondAttribute="bottom" constant="8" id="Tve-nM-1Rf"/>
                             <constraint firstItem="0V5-D6-dPm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U4j-p9-0C2"/>
@@ -189,7 +189,7 @@
                                     <constraint firstAttribute="height" constant="109" id="jQ3-4d-9pc"/>
                                     <constraint firstAttribute="width" constant="308" id="tiw-pT-aIl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1195,7 +1195,7 @@
                                     <constraint firstAttribute="height" constant="80" id="3Am-E2-gll"/>
                                     <constraint firstAttribute="width" constant="308" id="MLM-uH-W3U"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1263,7 +1263,7 @@
                                     <constraint firstAttribute="height" constant="90" id="y1K-Jh-2tV"/>
                                     <constraint firstAttribute="width" constant="308" id="zXv-Et-wB3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1367,16 +1367,6 @@
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJW-a6-UWc">
-                                <rect key="frame" x="131" y="131.66666666666666" width="111" height="109"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="GZc-Y1-Foe"/>
-                                    <constraint firstAttribute="width" constant="111" id="O6A-sB-f2U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-cE-dR0">
                                 <rect key="frame" x="9.6666666666666714" y="371.66666666666669" width="109" height="109"/>
                                 <constraints>
@@ -1385,7 +1375,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Try drawing today!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-sc-Qxy">
-                                <rect key="frame" x="130.66666666666666" y="246.66666666666663" width="239.99999999999997" height="59"/>
+                                <rect key="frame" x="130.66666666666666" y="216.66666666666666" width="239.99999999999997" height="58.999999999999972"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="TPW-xX-bGa"/>
@@ -1396,7 +1386,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="draw" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-XO-6jR">
-                                <rect key="frame" x="9.6666666666666714" y="221.66666666666663" width="109" height="109"/>
+                                <rect key="frame" x="9.6666666666666714" y="191.66666666666666" width="109" height="108.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="109" id="yXt-hV-NIz"/>
                                     <constraint firstAttribute="width" constant="109" id="yia-xJ-So2"/>
@@ -1422,18 +1412,16 @@
                             <constraint firstItem="a0l-c0-MO0" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="FGc-kk-n1N"/>
                             <constraint firstItem="bel-AW-J2K" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="FeX-hJ-8Te"/>
                             <constraint firstItem="8gJ-XO-6jR" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="-123.5" id="LwS-Pu-ZWc"/>
-                            <constraint firstItem="IJW-a6-UWc" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="-1" id="OLz-zk-iKC"/>
                             <constraint firstItem="8YM-7Z-wk4" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="OoU-cL-dwj"/>
                             <constraint firstItem="K8t-NB-M4b" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="62" id="VaD-uy-wY6"/>
                             <constraint firstItem="2pa-1Y-zNW" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" id="a5b-Ac-mzh"/>
                             <constraint firstItem="eOu-cE-dR0" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="20" id="d9c-r3-2Lj"/>
-                            <constraint firstItem="8gJ-XO-6jR" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-130" id="gRb-hY-Emo"/>
+                            <constraint firstItem="8gJ-XO-6jR" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-160" id="gRb-hY-Emo"/>
                             <constraint firstItem="EXn-bv-Oqt" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="120" id="h19-JH-w8X"/>
                             <constraint firstItem="a0l-c0-MO0" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="-72.5" id="h5K-uJ-Q8j"/>
-                            <constraint firstItem="Ikh-sc-Qxy" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-130" id="h5x-D8-ATs"/>
+                            <constraint firstItem="Ikh-sc-Qxy" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-160" id="h5x-D8-ATs"/>
                             <constraint firstItem="K8t-NB-M4b" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="20" id="jIU-Du-ejl"/>
                             <constraint firstItem="bel-AW-J2K" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="146.5" id="llH-i7-E9P"/>
-                            <constraint firstItem="IJW-a6-UWc" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="-220" id="pFr-sA-Zo4"/>
                             <constraint firstItem="aaT-TP-vKb" firstAttribute="centerY" secondItem="GVa-Do-i7m" secondAttribute="centerY" constant="180" id="rUm-4f-nYQ"/>
                             <constraint firstItem="8YM-7Z-wk4" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" constant="73.5" id="wKk-bK-emX"/>
                             <constraint firstItem="EXn-bv-Oqt" firstAttribute="centerX" secondItem="GVa-Do-i7m" secondAttribute="centerX" id="wWV-l9-9v0"/>
@@ -1467,12 +1455,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-pF-rl3">
-                                <rect key="frame" x="33.666666666666657" y="131.66666666666666" width="308" height="109"/>
+                                <rect key="frame" x="33.666666666666657" y="163.66666666666666" width="308" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="PXs-uR-2jo"/>
-                                    <constraint firstAttribute="height" constant="109" id="rqL-9Q-rIr"/>
+                                    <constraint firstAttribute="height" constant="45" id="rqL-9Q-rIr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2034,7 +2022,7 @@
                                     <constraint firstAttribute="height" constant="90" id="PIn-32-iia"/>
                                     <constraint firstAttribute="width" constant="308" id="xyE-Vr-8SX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2046,7 +2034,7 @@
                                     <constraint firstAttribute="height" constant="55" id="rx5-cU-UUU"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Abm-tV-3j8">
