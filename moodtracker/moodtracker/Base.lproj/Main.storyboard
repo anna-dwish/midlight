@@ -103,10 +103,10 @@
                                     <constraint firstAttribute="width" constant="200" id="bO9-kf-Nns"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlg-sa-aqR">
-                                <rect key="frame" x="140" y="473" width="95" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlg-sa-aqR">
+                                <rect key="frame" x="37.666666666666657" y="473" width="300" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="95" id="AUh-ww-WOV"/>
+                                    <constraint firstAttribute="width" constant="300" id="AUh-ww-WOV"/>
                                     <constraint firstAttribute="height" constant="33" id="a8f-r5-gcq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
@@ -164,7 +164,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="E9B-Ix-LFD"/>
                     <connections>
+                        <outlet property="createAccount" destination="mCZ-Su-gxS" id="bQi-Q4-xN8"/>
                         <outlet property="password" destination="2vd-T5-ede" id="fKl-HP-7OQ"/>
+                        <outlet property="passwordLabel" destination="xlg-sa-aqR" id="85E-wY-H1D"/>
                         <outlet property="signin" destination="Hiz-Ib-aYd" id="kUT-8D-hHA"/>
                         <outlet property="signinAid" destination="Ak1-5Q-kes" id="5eG-7E-rsk"/>
                         <outlet property="username" destination="Xx6-yC-xcV" id="aoA-X5-pF2"/>

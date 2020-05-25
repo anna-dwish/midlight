@@ -1,0 +1,5 @@
+"SIGNIN"="Sign In";
+"CREATEACCOUNT"="Create Account";
+"PASSWORD"="Password";
+"MISSINGFIELDS"="Please enter all fields";
+"INVALIDLOGIN"="Invalid Login";
