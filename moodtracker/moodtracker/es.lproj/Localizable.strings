@@ -3,3 +3,8 @@
 "PASSWORD"="Contraseña";
 "MISSINGFIELDS"="Por favor ingrese todos los campos";
 "INVALIDLOGIN"="Ingreso Invalido";
+"MISMATCHEDPASSWORDS"="Las contraseñas no coinciden";
+"DUPLICATEEMAIL"="Por favor use un email diferente";
+"ENTEREMAIL"="Ingrese un Email";
+"ENTERPASSWORD"="Ingrese una Contraseña";
+"CONFIRMPASSWORD"="Confirmar contraseña";

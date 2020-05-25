@@ -990,14 +990,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus" translatesAutoresizingMaskIntoConstraints="NO" id="T0v-Nr-DjH">
-                                <rect key="frame" x="87.666666666666686" y="126" width="200" height="120"/>
+                                <rect key="frame" x="87.666666666666686" y="146" width="200" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GJA-0X-Lag"/>
                                     <constraint firstAttribute="height" constant="120" id="dZZ-bl-tFE"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uZ-7P-hKa">
-                                <rect key="frame" x="-2.6666666666666572" y="259.66666666666669" width="380.33333333333326" height="33"/>
+                                <rect key="frame" x="-2.6666666666666572" y="279.66666666666669" width="380.33333333333326" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="380" id="4z2-8v-K6h"/>
                                     <constraint firstAttribute="height" constant="33" id="Bvg-6U-Rws"/>
@@ -1026,10 +1026,10 @@
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confim Password:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-Jq-F8o">
-                                <rect key="frame" x="101.66666666666669" y="496" width="172" height="30"/>
+                                <rect key="frame" x="37.666666666666657" y="496" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6N1-2X-YsM"/>
-                                    <constraint firstAttribute="width" constant="172" id="UDN-iF-vnB"/>
+                                    <constraint firstAttribute="width" constant="300" id="UDN-iF-vnB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -1058,10 +1058,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an email:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyZ-iy-8Et">
-                                <rect key="frame" x="106.66666666666669" y="326" width="162" height="30"/>
+                                <rect key="frame" x="37.666666666666657" y="326" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cZG-ek-qp0"/>
-                                    <constraint firstAttribute="width" constant="162" id="sDZ-h1-bDG"/>
+                                    <constraint firstAttribute="width" constant="300" id="sDZ-h1-bDG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -1099,10 +1099,10 @@
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Password:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCp-Qg-Nwp">
-                                <rect key="frame" x="96" y="411" width="183" height="30"/>
+                                <rect key="frame" x="37.666666666666657" y="411" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4QK-H3-jwB"/>
-                                    <constraint firstAttribute="width" constant="183" id="x07-aI-vab"/>
+                                    <constraint firstAttribute="width" constant="300" id="x07-aI-vab"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -1157,8 +1157,8 @@
                             <constraint firstItem="5uZ-7P-hKa" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="I5Z-AK-U2n"/>
                             <constraint firstItem="4SF-bp-4uy" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="KIq-eg-ZJ1"/>
                             <constraint firstItem="MCp-Qg-Nwp" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="20" id="MFP-kp-bbE"/>
-                            <constraint firstItem="T0v-Nr-DjH" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="-220" id="Nwu-RH-waw"/>
-                            <constraint firstItem="5uZ-7P-hKa" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="-130" id="S6F-Ns-h46"/>
+                            <constraint firstItem="T0v-Nr-DjH" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="-200" id="Nwu-RH-waw"/>
+                            <constraint firstItem="5uZ-7P-hKa" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="-110" id="S6F-Ns-h46"/>
                             <constraint firstItem="4SF-bp-4uy" firstAttribute="centerY" secondItem="7o0-Yo-jam" secondAttribute="centerY" constant="55" id="VhK-05-QMo"/>
                             <constraint firstItem="gji-S6-b0c" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="c0Y-PC-qZF"/>
                             <constraint firstItem="FyZ-iy-8Et" firstAttribute="centerX" secondItem="7o0-Yo-jam" secondAttribute="centerX" id="hIR-JL-nsd"/>
@@ -1172,9 +1172,12 @@
                     <navigationItem key="navigationItem" id="rPE-yU-5eQ"/>
                     <connections>
                         <outlet property="confirmPassword" destination="vPS-zI-tum" id="UYL-ny-faU"/>
+                        <outlet property="confirmPasswordLabel" destination="k9C-Jq-F8o" id="zVV-Ru-Urm"/>
                         <outlet property="createAccount" destination="gji-S6-b0c" id="WC9-Kn-v4F"/>
                         <outlet property="createAccountAid" destination="5uZ-7P-hKa" id="ffG-S4-wJM"/>
                         <outlet property="email" destination="UY4-av-jdb" id="4KS-n3-UO8"/>
+                        <outlet property="enterEmailLabel" destination="FyZ-iy-8Et" id="SDs-xu-TFg"/>
+                        <outlet property="enterPasswordLabel" destination="MCp-Qg-Nwp" id="gI7-QW-yVa"/>
                         <outlet property="password" destination="4SF-bp-4uy" id="aQz-S1-nlI"/>
                         <segue destination="Vjc-OF-bJI" kind="show" identifier="beginQuestionnaire" id="6Z8-Pc-vQq"/>
                     </connections>
