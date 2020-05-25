@@ -218,10 +218,10 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="We'd like to get to know you better! Please answer the following questions to ensure a personalized experience." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brm-UB-a93">
-                                <rect key="frame" x="63.666666666666657" y="388" width="247.99999999999997" height="173"/>
+                                <rect key="frame" x="37.666666666666657" y="388" width="300" height="173"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="4nt-hz-Ufp"/>
+                                    <constraint firstAttribute="width" constant="300" id="4nt-hz-Ufp"/>
                                     <constraint firstAttribute="height" constant="173" id="pNa-8s-RYi"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -245,6 +245,7 @@
                     <navigationItem key="navigationItem" id="Vhc-S6-GrW"/>
                     <connections>
                         <outlet property="nextQuestion" destination="TFY-Xu-5Ie" id="uLk-ek-6xk"/>
+                        <outlet property="welcomeText" destination="Brm-UB-a93" id="AXV-xZ-ClB"/>
                         <segue destination="GdQ-n1-2LF" kind="show" identifier="welcomeToCurrent" id="6F7-TG-k6w"/>
                     </connections>
                 </viewController>

@@ -28,6 +28,7 @@ class NewActivitiesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextQuestion.setTitle(NSLocalizedString("NEXT",comment:""),for:.normal)
         let activities = [cook,read,pets,art,exercise,media,nature,journal]
         for selectedAct in activities {
             if currentActivities.contains((selectedAct?.titleLabel?.text)!){

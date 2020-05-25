@@ -28,6 +28,7 @@ class CurrentActivitiesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextQuestion.setTitle(NSLocalizedString("NEXT",comment:""),for:.normal)
         }
     
     @IBAction func activityButtonClk(_ sender: UIButton) {

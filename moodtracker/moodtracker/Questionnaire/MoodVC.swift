@@ -28,6 +28,7 @@ class MoodVC: UIViewController {
         super.viewDidLoad()
         nextQuestion.isEnabled = false
         nextQuestion.backgroundColor = UIColor.lightGray
+        nextQuestion.setTitle(NSLocalizedString("NEXT",comment:""),for:.normal)
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
         // Do any additional setup after loading the view.
     }
