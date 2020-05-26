@@ -13,16 +13,23 @@ class ProfileCreatorVC: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var finishProfile: UIButton!
     @IBOutlet weak var inputAid: UILabel!
+    @IBOutlet weak var enterNameText: UILabel!
+    @IBOutlet weak var nameText: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        enterNameText.text = NSLocalizedString("ENTERNAMETEXT",comment:"")
+        nameText.text = NSLocalizedString("NAME",comment:"")
+        finishProfile.setTitle(NSLocalizedString("FINISH",comment:""),for:.normal)
         
     }
     
     @IBAction func createProfile()
     {
         if (userName.text == nil || userName.text!.count == 0) {
-            inputAid.text = "Please enter a valid name"
+            inputAid.textColor = UIColor.black
+            inputAid.text = NSLocalizedString("MISSINGFIELDS",comment:"")
             return
         }
         else if !Reachability.isConnectedToNetwork(){
@@ -35,7 +42,8 @@ class ProfileCreatorVC: UIViewController {
         changeRequest?.displayName = userName.text
         changeRequest?.commitChanges { (error) in
             if error != nil {
-                self.inputAid.text = "Please try again"
+                self.inputAid.textColor = UIColor.black
+                self.inputAid.text = NSLocalizedString("TRYAGAIN",comment:"")
                 return
             }
             else{

@@ -15,6 +15,7 @@ class MoodVC: UIViewController {
     @IBOutlet weak var moodFour: UIButton!
     @IBOutlet weak var moodFive: UIButton!
     @IBOutlet weak var nextQuestion: UIButton!
+    @IBOutlet weak var moodQuestionnaireText: UITextView!
     
     var newActivities = Set<String>()
     var currentActivities = Set<String>()
@@ -29,6 +30,7 @@ class MoodVC: UIViewController {
         nextQuestion.isEnabled = false
         nextQuestion.backgroundColor = UIColor.lightGray
         nextQuestion.setTitle(NSLocalizedString("NEXT",comment:""),for:.normal)
+        moodQuestionnaireText.text = NSLocalizedString("MOODQUESTIONNAIRETEXT",comment:"")
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
         // Do any additional setup after loading the view.
     }
