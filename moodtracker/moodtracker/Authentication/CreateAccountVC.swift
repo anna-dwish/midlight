@@ -19,22 +19,29 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var createAccountAid: UILabel!
     @IBOutlet weak var createAccount: UIButton!
     
+    @IBOutlet weak var enterEmailLabel: UILabel!
+    @IBOutlet weak var enterPasswordLabel: UILabel!
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createAccount.addTarget(self, action: #selector(enableAccount), for: .touchUpInside)
+        createAccount.setTitle(NSLocalizedString("CREATEACCOUNT",comment:""), for: .normal)
+        enterEmailLabel.text = NSLocalizedString("ENTEREMAIL",comment:"")
+        enterPasswordLabel.text = NSLocalizedString("ENTERPASSWORD",comment:"")
+        confirmPasswordLabel.text = NSLocalizedString("CONFIRMPASSWORD",comment:"")
         // Do any additional setup after loading the view.
     }
     
     @IBAction func enableAccount(){
         if (email.text?.isEmpty ?? true || password.text?.isEmpty ?? true || confirmPassword.text?.isEmpty ?? true) {
             createAccountAid.textColor = UIColor.black
-            createAccountAid.text = "Please complete all fields"
+            createAccountAid.text = NSLocalizedString("MISSINGFIELDS",comment:"")
             return
         }
         else if (password.text != confirmPassword.text){
             createAccountAid.textColor = UIColor.black
-            createAccountAid.text = "Passwords do not match"
+            createAccountAid.text = NSLocalizedString("MISMATCHEDPASSWORDS",comment:"")
             return
         }
         else if !Reachability.isConnectedToNetwork() {
@@ -51,10 +58,11 @@ class CreateAccountVC: UIViewController {
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { [weak self] authResult, error in
         if error != nil {
             self?.createAccountAid.textColor = UIColor.black
-            self?.createAccountAid.text = "Please use a different email"
+            self?.createAccountAid.text = NSLocalizedString("DUPLICATEEMAIL",comment:"")
             return
         }
             Auth.auth().signIn(withEmail: (self?.email.text)!, password: (self?.password.text)!)
+            self?.createAccountAid.textColor = UIColor.white
             self?.performSegue(withIdentifier: "beginQuestionnaire", sender: self)
       }
         

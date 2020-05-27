@@ -28,6 +28,9 @@
 		07BEFFD7244AAF160079F333 /* WelcomeQuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */; };
 		07BEFFD9244AC0C70079F333 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEFFD8244AC0C70079F333 /* ProfileVC.swift */; };
 		07C4AE11243FF2C5007C2C4B /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C4AE10243FF2C5007C2C4B /* DateCell.swift */; };
+		07DF5340247C3EA1004B69D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07DF5342247C3EA1004B69D7 /* Localizable.strings */; };
+		07DF5349247DF9E5004B69D7 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DF5348247DF9E5004B69D7 /* calendar.png */; };
+		07DF534B247DFA8B004B69D7 /* calendarLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DF534A247DFA8B004B69D7 /* calendarLarge.png */; };
 		07E25E2C244027510093F184 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E25E2B244027510093F184 /* CalendarVC.swift */; };
 		07F1D2C0244A4C0300A9CBAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */; };
 		07FEE701244B91CD00758D38 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEE6EB244B91CC00758D38 /* info.png */; };
@@ -80,6 +83,11 @@
 		07BEFFD6244AAF160079F333 /* WelcomeQuestionnaireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeQuestionnaireVC.swift; sourceTree = "<group>"; };
 		07BEFFD8244AC0C70079F333 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		07C4AE10243FF2C5007C2C4B /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		07DF5341247C3EA1004B69D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07DF5346247C43A4004B69D7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		07DF5347247C442B004B69D7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07DF5348247DF9E5004B69D7 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		07DF534A247DFA8B004B69D7 /* calendarLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarLarge.png; sourceTree = "<group>"; };
 		07E25E2B244027510093F184 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		07F1D2BF244A4C0300A9CBAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07FEE6EB244B91CC00758D38 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
@@ -149,6 +157,7 @@
 				07A5E6CA2475EEF800A3D6EF /* Questionnaire */,
 				07903BBB24230A1D004238A0 /* ViewController.swift */,
 				07903BBD24230A1D004238A0 /* Main.storyboard */,
+				07DF5342247C3EA1004B69D7 /* Localizable.strings */,
 				07A5E6CE2475F1DC00A3D6EF /* Log */,
 				07A5E6CC2475F16300A3D6EF /* Authentication */,
 				07A5E6CB2475F0D900A3D6EF /* Calendar */,
@@ -212,6 +221,8 @@
 		07FEE6EA244B91CC00758D38 /* mediaHyde */ = {
 			isa = PBXGroup;
 			children = (
+				07DF5348247DF9E5004B69D7 /* calendar.png */,
+				07DF534A247DFA8B004B69D7 /* calendarLarge.png */,
 				07FEE6EB244B91CC00758D38 /* info.png */,
 				07FEE6EC244B91CC00758D38 /* tv.png */,
 				07FEE6ED244B91CC00758D38 /* bubble.png */,
@@ -300,6 +311,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 07903BAB24230A1D004238A0;
 			productRefGroup = 07903BB524230A1D004238A0 /* Products */;
@@ -325,14 +337,17 @@
 				07FEE703244B91CD00758D38 /* bubble.png in Resources */,
 				07FEE70D244B91CD00758D38 /* nature.png in Resources */,
 				07F1D2C0244A4C0300A9CBAB /* GoogleService-Info.plist in Resources */,
+				07DF5349247DF9E5004B69D7 /* calendar.png in Resources */,
 				07903BC124230A22004238A0 /* Assets.xcassets in Resources */,
 				07FEE704244B91CD00758D38 /* paint.png in Resources */,
 				07FEE70B244B91CD00758D38 /* pets.png in Resources */,
+				07DF534B247DFA8B004B69D7 /* calendarLarge.png in Resources */,
 				07FEE706244B91CD00758D38 /* person.png in Resources */,
 				07FEE70A244B91CD00758D38 /* journalbook.png in Resources */,
 				07FEE70F244B91CD00758D38 /* resources.png in Resources */,
 				07FEE705244B91CD00758D38 /* home.png in Resources */,
 				07FEE711244B91CD00758D38 /* exercise.png in Resources */,
+				07DF5340247C3EA1004B69D7 /* Localizable.strings in Resources */,
 				07FEE702244B91CD00758D38 /* tv.png in Resources */,
 				07FEE70C244B91CD00758D38 /* ellipsis.png in Resources */,
 				07903BBF24230A1D004238A0 /* Main.storyboard in Resources */,
@@ -423,6 +438,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				07903BBE24230A1D004238A0 /* Base */,
+				07DF5346247C43A4004B69D7 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -435,6 +451,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		07DF5342247C3EA1004B69D7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07DF5341247C3EA1004B69D7 /* en */,
+				07DF5347247C442B004B69D7 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -442,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -502,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

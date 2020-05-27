@@ -28,6 +28,10 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var actEight: UIImageView!
     @IBOutlet weak var actNine: UIImageView!
     
+    
+    @IBOutlet weak var averageMoodText: UITextView!
+    @IBOutlet weak var newActsText: UITextView!
+    
     var moods = [UIButton]()
     var acts = [UIImageView]()
     let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
@@ -40,7 +44,8 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        averageMoodText.text = NSLocalizedString("AVERAGEMOOD",comment:"")
+        newActsText.text = NSLocalizedString("NEWACTSLABEL",comment:"")
         moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
         acts = [actOne,actTwo,actThree,actFour,actFive, actSeven,actEight,actNine]
         if !Reachability.isConnectedToNetwork(){

@@ -1,0 +1,273 @@
+
+/* Class = "UILabel"; text = "Midlight"; ObjectID = "0V5-D6-dPm"; */
+"0V5-D6-dPm.text" = "Midlight";
+
+/* Class = "UIButton"; normalTitle = "Cooking/Baking"; ObjectID = "0jD-Mo-XdA"; */
+"0jD-Mo-XdA.normalTitle" = "Cooking/Baking";
+
+/* Class = "UIButton"; normalTitle = "Watching media"; ObjectID = "1bN-Dm-wto"; */
+"1bN-Dm-wto.normalTitle" = "Watching media";
+
+/* Class = "UIButton"; normalTitle = "Reading"; ObjectID = "3Nq-hI-RbT"; */
+"3Nq-hI-RbT.normalTitle" = "Reading";
+
+/* Class = "UITextView"; text = "National Suicide Prevention Lifeline"; ObjectID = "3a3-qC-hMT"; */
+"3a3-qC-hMT.text" = "National Suicide Prevention Lifeline";
+
+/* Class = "UITextView"; text = "Have you stretched and moved your body today?"; ObjectID = "4mc-8h-TW2"; */
+"4mc-8h-TW2.text" = "Have you stretched and moved your body today?";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "4sV-iR-G7J"; */
+"4sV-iR-G7J.text" = "Email:";
+
+/* Class = "UILabel"; text = "Health"; ObjectID = "5WE-WD-z05"; */
+"5WE-WD-z05.text" = "Health";
+
+/* Class = "UITextView"; text = "1-800-662-4357"; ObjectID = "5ZJ-5V-OUm"; */
+"5ZJ-5V-OUm.text" = "1-800-662-4357";
+
+/* Class = "UILabel"; text = "Blank"; ObjectID = "5uZ-7P-hKa"; */
+"5uZ-7P-hKa.text" = "Blank";
+
+/* Class = "UIButton"; normalTitle = "Being in nature"; ObjectID = "6iX-4m-bce"; */
+"6iX-4m-bce.normalTitle" = "Being in nature";
+
+/* Class = "UILabel"; text = "Date of Entry"; ObjectID = "8R4-Lr-FTL"; */
+"8R4-Lr-FTL.text" = "Date of Entry";
+
+/* Class = "UIButton"; normalTitle = "Creating art"; ObjectID = "9Xx-ne-rDL"; */
+"9Xx-ne-rDL.normalTitle" = "Creating art";
+
+/* Class = "UINavigationItem"; title = "Current Activities"; ObjectID = "A4i-w5-0eK"; */
+"A4i-w5-0eK.title" = "Current Activities";
+
+/* Class = "UILabel"; text = "MonthLabel"; ObjectID = "AC3-ze-XHP"; */
+"AC3-ze-XHP.text" = "MonthLabel";
+
+/* Class = "UILabel"; text = "Blank"; ObjectID = "Ak1-5Q-kes"; */
+"Ak1-5Q-kes.text" = "Blank";
+
+/* Class = "UITextView"; text = "We'd like to get to know you better! Please answer the following questions to ensure a personalized experience."; ObjectID = "Brm-UB-a93"; */
+"Brm-UB-a93.text" = "We'd like to get to know you better! Please answer the following questions to ensure a personalized experience.";
+
+/* Class = "UIButton"; normalTitle = "Watching media"; ObjectID = "CD4-7s-TCx"; */
+"CD4-7s-TCx.normalTitle" = "Watching media";
+
+/* Class = "UIButton"; normalTitle = "Watching media"; ObjectID = "CXg-oM-PQu"; */
+"CXg-oM-PQu.normalTitle" = "Watching media";
+
+/* Class = "UIButton"; normalTitle = "Exercise"; ObjectID = "D14-KF-zim"; */
+"D14-KF-zim.normalTitle" = "Exercise";
+
+/* Class = "UILabel"; text = "Please fill in the rest of your profile"; ObjectID = "DxU-sR-Uu6"; */
+"DxU-sR-Uu6.text" = "Please fill in the rest of your profile";
+
+/* Class = "UITextView"; text = "Enter Today's Mood:"; ObjectID = "EXn-bv-Oqt"; */
+"EXn-bv-Oqt.text" = "Enter Today's Mood:";
+
+/* Class = "UINavigationItem"; title = "New Activities"; ObjectID = "Ewc-5v-k38"; */
+"Ewc-5v-k38.title" = "New Activities";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "ExH-zW-5MP"; */
+"ExH-zW-5MP.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "Resources"; ObjectID = "FQD-wo-CJx"; */
+"FQD-wo-CJx.text" = "Resources";
+
+/* Class = "UILabel"; text = "Enter an email:"; ObjectID = "FyZ-iy-8Et"; */
+"FyZ-iy-8Et.text" = "Enter an email:";
+
+/* Class = "UITextView"; text = "Health Questions"; ObjectID = "GQ5-wr-fv8"; */
+"GQ5-wr-fv8.text" = "Health Questions";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "GkQ-At-Ifc"; */
+"GkQ-At-Ifc.title" = "Title";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "GvF-DE-Tef"; */
+"GvF-DE-Tef.text" = "Name:";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "HUb-zk-8x2"; */
+"HUb-zk-8x2.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "Hiz-Ib-aYd"; */
+"Hiz-Ib-aYd.normalTitle" = "Sign In";
+
+/* Class = "UITextView"; text = "Try drawing today!"; ObjectID = "Ikh-sc-Qxy"; */
+"Ikh-sc-Qxy.text" = "Try drawing today!";
+
+/* Class = "UITextView"; text = "Treat yourself kindly to better those around you - Gillian Anderson"; ObjectID = "K8t-NB-M4b"; */
+"K8t-NB-M4b.text" = "Treat yourself kindly to better those around you - Gillian Anderson";
+
+/* Class = "UITextView"; text = "Are you hydrated?"; ObjectID = "LNr-yb-Azt"; */
+"LNr-yb-Azt.text" = "Are you hydrated?";
+
+/* Class = "UILabel"; text = "Hotlines"; ObjectID = "M3I-tD-iZ8"; */
+"M3I-tD-iZ8.text" = "Hotlines";
+
+/* Class = "UILabel"; text = "Enter a Password:"; ObjectID = "MCp-Qg-Nwp"; */
+"MCp-Qg-Nwp.text" = "Enter a Password:";
+
+/* Class = "UITextView"; text = "Please select what you currently do:"; ObjectID = "NQR-te-Ave"; */
+"NQR-te-Ave.text" = "Please select what you currently do:";
+
+/* Class = "UIButton"; normalTitle = "Creating art"; ObjectID = "NZY-5T-ELa"; */
+"NZY-5T-ELa.normalTitle" = "Creating art";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "Nyy-Ls-ZuQ"; */
+"Nyy-Ls-ZuQ.text" = "date";
+
+/* Class = "UIButton"; normalTitle = "Playing with Pets"; ObjectID = "P25-3Y-mqH"; */
+"P25-3Y-mqH.normalTitle" = "Playing with Pets";
+
+/* Class = "UITabBarItem"; title = "Info"; ObjectID = "QYF-bp-v57"; */
+"QYF-bp-v57.title" = "Info";
+
+/* Class = "UILabel"; text = "Blank"; ObjectID = "SHd-8c-9ei"; */
+"SHd-8c-9ei.text" = "Blank";
+
+/* Class = "UITextView"; text = "Please select the mood you felt the most frequently over the last month"; ObjectID = "SLX-rg-gWr"; */
+"SLX-rg-gWr.text" = "Please select the mood you felt the most frequently over the last month";
+
+/* Class = "UILabel"; text = "Midlight"; ObjectID = "TEQ-dD-KD4"; */
+"TEQ-dD-KD4.text" = "Midlight";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "TFY-Xu-5Ie"; */
+"TFY-Xu-5Ie.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Journaling"; ObjectID = "TYC-Iq-96M"; */
+"TYC-Iq-96M.normalTitle" = "Journaling";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "TkE-yn-qvt"; */
+"TkE-yn-qvt.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Being in nature"; ObjectID = "U1P-Mq-xRX"; */
+"U1P-Mq-xRX.normalTitle" = "Being in nature";
+
+/* Class = "UITextView"; text = "Our purpose is to encourage awareness with respect to one's mental health. We do not expect this app to be a \"cure-all\" to anyone's struggles, but hope it can be a tool that helps users lead a better life. If you or a loved one are in need of urgent help, please contact one of the hotlines below, or consider speaking with a professional. "; ObjectID = "U4x-Pm-QVI"; */
+"U4x-Pm-QVI.text" = "Our purpose is to encourage awareness with respect to one's mental health. We do not expect this app to be a \"cure-all\" to anyone's struggles, but hope it can be a tool that helps users lead a better life. If you or a loved one are in need of urgent help, please contact one of the hotlines below, or consider speaking with a professional. ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "UhN-pF-rl3"; */
+"UhN-pF-rl3.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Finish"; ObjectID = "WK5-Hg-GSZ"; */
+"WK5-Hg-GSZ.normalTitle" = "Finish";
+
+/* Class = "UIButton"; normalTitle = "Cooking/Baking"; ObjectID = "YlQ-t2-gDf"; */
+"YlQ-t2-gDf.normalTitle" = "Cooking/Baking";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "ZJY-WX-XDe"; */
+"ZJY-WX-XDe.normalTitle" = "Yes";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "ZnQ-0Y-sFg"; */
+"ZnQ-0Y-sFg.title" = "Back";
+
+/* Class = "UITextView"; text = "Have you eaten anything nutritious in the last 3 hours?"; ObjectID = "aZZ-2K-3vx"; */
+"aZZ-2K-3vx.text" = "Have you eaten anything nutritious in the last 3 hours?";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "b5N-Kh-l82"; */
+"b5N-Kh-l82.normalTitle" = "Next";
+
+/* Class = "UITabBarItem"; title = "Calendar"; ObjectID = "dW4-dh-xEV"; */
+"dW4-dh-xEV.title" = "Calendar";
+
+/* Class = "UITabBarItem"; title = "Health"; ObjectID = "dXX-sC-8dz"; */
+"dXX-sC-8dz.title" = "Health";
+
+/* Class = "UIButton"; normalTitle = "Exercise"; ObjectID = "dYe-2c-LvO"; */
+"dYe-2c-LvO.normalTitle" = "Exercise";
+
+/* Class = "UITextView"; text = "Please select what you wish to do:"; ObjectID = "drc-p0-a7S"; */
+"drc-p0-a7S.text" = "Please select what you wish to do:";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "eCq-ho-acs"; */
+"eCq-ho-acs.normalTitle" = "Next";
+
+/* Class = "UITabBarItem"; title = "Journal"; ObjectID = "er2-Uf-c9a"; */
+"er2-Uf-c9a.title" = "Journal";
+
+/* Class = "UITextView"; text = "Average Mood:"; ObjectID = "fTQ-FD-mKp"; */
+"fTQ-FD-mKp.text" = "Average Mood:";
+
+/* Class = "UIButton"; normalTitle = "Reading"; ObjectID = "gKT-Zv-3yY"; */
+"gKT-Zv-3yY.normalTitle" = "Reading";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "gji-S6-b0c"; */
+"gji-S6-b0c.normalTitle" = "Create Account";
+
+/* Class = "UIButton"; normalTitle = "Creating art"; ObjectID = "hKQ-Ka-sBR"; */
+"hKQ-Ka-sBR.normalTitle" = "Creating art";
+
+/* Class = "UITextView"; text = "Please select today's activities"; ObjectID = "iJd-eq-esb"; */
+"iJd-eq-esb.text" = "Please select today's activities";
+
+/* Class = "UITextView"; text = "Please try to move and stretch your body now to improve blood flow."; ObjectID = "iLO-pe-thl"; */
+"iLO-pe-thl.text" = "Please try to move and stretch your body now to improve blood flow.";
+
+/* Class = "UITextView"; text = "If you haven't eaten much today, please try eat a snack (some fruit, a granola bar) right now."; ObjectID = "jEM-iK-qfS"; */
+"jEM-iK-qfS.text" = "If you haven't eaten much today, please try eat a snack (some fruit, a granola bar) right now.";
+
+/* Class = "UIButton"; normalTitle = "Cooking/Baking"; ObjectID = "jUD-wl-1uH"; */
+"jUD-wl-1uH.normalTitle" = "Cooking/Baking";
+
+/* Class = "UILabel"; text = "Confim Password:"; ObjectID = "k9C-Jq-F8o"; */
+"k9C-Jq-F8o.text" = "Confim Password:";
+
+/* Class = "UITextView"; text = "Substance Abuse Hotline"; ObjectID = "lFF-cg-0d3"; */
+"lFF-cg-0d3.text" = "Substance Abuse Hotline";
+
+/* Class = "UIButton"; normalTitle = "Create an account"; ObjectID = "mCZ-Su-gxS"; */
+"mCZ-Su-gxS.normalTitle" = "Create an account";
+
+/* Class = "UIButton"; normalTitle = "Reading"; ObjectID = "o5V-9W-4ha"; */
+"o5V-9W-4ha.normalTitle" = "Reading";
+
+/* Class = "UIButton"; normalTitle = "Journaling"; ObjectID = "oSC-h4-PDa"; */
+"oSC-h4-PDa.normalTitle" = "Journaling";
+
+/* Class = "UIButton"; normalTitle = "Playing with Pets"; ObjectID = "ofN-r8-xJR"; */
+"ofN-r8-xJR.normalTitle" = "Playing with Pets";
+
+/* Class = "UIButton"; normalTitle = "Being in nature"; ObjectID = "og2-Fa-2Bf"; */
+"og2-Fa-2Bf.normalTitle" = "Being in nature";
+
+/* Class = "UIButton"; normalTitle = "Playing with Pets"; ObjectID = "saf-Fe-rcO"; */
+"saf-Fe-rcO.normalTitle" = "Playing with Pets";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "sdE-9L-bxp"; */
+"sdE-9L-bxp.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Exercise"; ObjectID = "u4T-LJ-3YN"; */
+"u4T-LJ-3YN.normalTitle" = "Exercise";
+
+/* Class = "UITextView"; text = "If you haven't had much water today, please go and drink a glass right now."; ObjectID = "uHj-WQ-6FF"; */
+"uHj-WQ-6FF.text" = "If you haven't had much water today, please go and drink a glass right now.";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "uSs-Jc-EFk"; */
+"uSs-Jc-EFk.normalTitle" = "No";
+
+/* Class = "UITextView"; text = "New Activities"; ObjectID = "ugl-CW-RbJ"; */
+"ugl-CW-RbJ.text" = "New Activities";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "vSv-5f-S43"; */
+"vSv-5f-S43.normalTitle" = "Yes";
+
+/* Class = "UITextView"; text = "Activities Completed"; ObjectID = "vnX-e2-yjZ"; */
+"vnX-e2-yjZ.text" = "Activities Completed";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "vwD-Z5-tRv"; */
+"vwD-Z5-tRv.title" = "Profile";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "x1E-MX-LjZ"; */
+"x1E-MX-LjZ.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "x54-aM-o8x"; */
+"x54-aM-o8x.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Journaling"; ObjectID = "xFU-lC-Lwv"; */
+"xFU-lC-Lwv.normalTitle" = "Journaling";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "xlg-sa-aqR"; */
+"xlg-sa-aqR.text" = "Password:";
+
+/* Class = "UITextView"; text = "1-800-273-8255"; ObjectID = "y3q-ZU-H7a"; */
+"y3q-ZU-H7a.text" = "1-800-273-8255";

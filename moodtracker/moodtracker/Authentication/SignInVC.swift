@@ -12,20 +12,25 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var signin: UIButton!
     @IBOutlet weak var signinAid: UILabel!
+    @IBOutlet weak var createAccount: UIButton!
     
     
     var handle: AuthStateDidChangeListenerHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.signin.setTitle(NSLocalizedString("SIGNIN",comment:""), for: .normal)
+        self.createAccount.setTitle(NSLocalizedString("CREATEACCOUNT",comment:""), for: .normal)
+        self.passwordLabel.text = NSLocalizedString("PASSWORD",comment:"")
     }
     
     @IBAction func enableSignIn(){
         if (username.text?.isEmpty ?? true || password.text?.isEmpty ?? true) {
             signinAid.textColor = UIColor.black
-            signinAid.text = "Please enter both fields"
+            signinAid.text = NSLocalizedString("MISSINGFIELDS",comment:"")
             return
         }
         else if !Reachability.isConnectedToNetwork(){
@@ -41,9 +46,10 @@ class SignInVC: UIViewController {
         Auth.auth().signIn(withEmail: username.text!, password: password.text!) { [weak self] authResult, error in
         if error != nil {
             self?.signinAid.textColor = UIColor.black
-            self?.signinAid.text = "Invalid Login"
+            self?.signinAid.text = NSLocalizedString("INVALIDLOGIN",comment:"")
             return
         }
+        self?.signinAid.textColor = UIColor.white
         self?.performSegue(withIdentifier: "signUserIn", sender: self)
       }
     }

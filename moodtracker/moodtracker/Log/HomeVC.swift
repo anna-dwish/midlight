@@ -18,33 +18,69 @@ class HomeVC: UIViewController {
         @IBOutlet weak var moodFour: UIButton!
         @IBOutlet weak var moodFive: UIButton!
         
-        @IBOutlet weak var recImage: UIImageView!
-        @IBOutlet weak var rec: UITextView!
-        @IBOutlet weak var quote: UITextView!
  
+        @IBOutlet weak var cook: UIButton!
+        @IBOutlet weak var read: UIButton!
+        @IBOutlet weak var pets: UIButton!
+        @IBOutlet weak var art: UIButton!
+        @IBOutlet weak var exercise: UIButton!
+        @IBOutlet weak var media: UIButton!
+        @IBOutlet weak var nature: UIButton!
+        @IBOutlet weak var journal: UIButton!
+    
+
+    
         let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
         "Playing with Pets":"pets","Creating art":"paint",
         "Exercise":"exercise","Watching media":"tv",
         "Being in nature":"nature","Journaling":"draw"]
+        let NEUTRAL = UIColor(red: 226/255, green: 215/255, blue: 236/255, alpha: 1)
         let SELECTED = UIColor(red: 179/255, green: 165/255, blue: 201/255, alpha: 1)
             
         var moods = [UIButton]()
-        var selectedMood = 0
+        var selectedActivities = Set<String>()
+        var stringsToActions:[String:UIButton]? = nil
+        var actionsToStrings:[UIButton:String]? = nil
+        var selectedMood = 2
         var receivedMoodInput = false
 
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            localizeActivityNames()
             moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
-            getQuote()
-            retrieveUserSpecificActivities()
+            stringsToActions = ["Cooking/Baking":cook,"Reading":read,
+                                "Playing with Pets":pets,"Creating art":art,
+                                "Exercise":exercise,"Watching media":media,
+                                "Being in nature":nature,"Journaling":journal]
+            actionsToStrings = [cook:"Cooking/Baking",read:"Reading",
+                                pets:"Playing with Pets",art:"Creating art",
+                                exercise:"Exercise",media:"Watching media",
+                                nature:"Being in nature",journal:"Journaling"]
+        }
+    
+        func localizeActivityNames(){
+            cook.setTitle(NSLocalizedString("COOK",comment:""),for:.normal)
+            read.setTitle(NSLocalizedString("READ",comment:""),for:.normal)
+            pets.setTitle(NSLocalizedString("PETS",comment:""),for:.normal)
+            art.setTitle(NSLocalizedString("ART",comment:""),for:.normal)
+            exercise.setTitle(NSLocalizedString("EXERCISE",comment:""),for:.normal)
+            media.setTitle(NSLocalizedString("MEDIA",comment:""),for:.normal)
+            nature.setTitle(NSLocalizedString("NATURE",comment:""),for:.normal)
+            journal.setTitle(NSLocalizedString("JOURNAL",comment:""),for:.normal)
         }
     
         override func viewDidAppear(_ animated: Bool) {
-            currentMoodIsAvailable()
+            displayDailyLog()
         }
     
-        func currentMoodIsAvailable() {
+        override func viewDidDisappear(_ animated: Bool) {
+               updateDailyLog()
+        }
+    
+        
+    
+        func displayDailyLog() {
             if !Reachability.isConnectedToNetwork(){
                 displayReachabilityAlert()
                 return
@@ -54,89 +90,22 @@ class HomeVC: UIViewController {
                 if let document = document, document.exists {
                     let selected = self.moods[document.data()!["mood"] as! Int]
                     selected.backgroundColor = self.SELECTED
+                    self.selectedMood = document.data()!["mood"] as! Int
+                    if document.get("activities") != nil{
+                        let loggedActivities = document.data()!["activities"] as! Array<String>
+                        self.updateActivityDisplay(activities: loggedActivities)
+                        self.selectedActivities.formUnion(Set(loggedActivities))
+                    }
                }
-                else {
-                    self.createAlert(title: "Daily Log", message: "Remember to log your mood today!")
-                }
-            }
-        }
-        
-        func createAlert (title: String, message: String){
-            
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
-            
-        }
-        
-        func getQuote() {
-            var request = URLRequest(url: URL(string: "https://quotes.rest/qod")!)
-            request.httpMethod = "GET"
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            request.addValue("YOUR API KEY HERE", forHTTPHeaderField: "X-TheySaidSo-Api-Secret")
-            let mySession = URLSession(configuration: URLSessionConfiguration.default)
-            let task = mySession.dataTask(with: request) { data, response, error in
-                guard error == nil else {
-                    print ("error: \(error!)")
-                    return
-                }
-                guard data != nil else {
-                    print("No data")
-                    return
-                }
-                do {
-                    let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-                    let metaDictionary = jsonDictionary!["contents"] as? [String: Any]
-                    let entry = metaDictionary!["quotes"] as? NSArray
-                    let entryDictionary = entry![0] as? [String:Any]
-                    DispatchQueue.main.async {
-                        self.quote.text = entryDictionary!["quote"] as? String
-                    }
-                } catch {
-                    print("JSON Decode error")
-                }
-            }
-            task.resume()
-            
-            }
-        
-        
-        func retrieveUserSpecificActivities(){
-            let profileData = getProfileDocument()
-            
-            profileData.getDocument { (document, error) in
-                if let document = document, document.exists {
-                    var activities = [String]()
-                    activities = document.data()!["newActivities"] as! Array<String>
-                    let currentActivities = document.data()!["currentActivities"] as! Array<String>
-                    activities.append(contentsOf:currentActivities)
-                    if (activities.count > 0){
-                        self.promptUserActivity(options: activities)
-                    }
-                    else {
-                        self.promptRandomActivity()
-                    }
-                    
-              }
             }
         }
     
-        func promptUserActivity(options:[String]){
-            let ind = Int.random(in: 0..<options.count)
-            let activity = options[ind]
-            rec.text = "Try " + activity.lowercased() + " today!"
-            recImage.image = UIImage(named: descToImage[activity]!)
-            
+        func updateActivityDisplay(activities:[String]) {
+            for act in activities {
+                self.stringsToActions![act]!.backgroundColor = SELECTED
+            }
         }
         
-        func promptRandomActivity(){
-            let str = descToImage.keys.randomElement()
-            rec.text = "Try " + str!.lowercased() + " today!"
-            recImage.image = UIImage(named: descToImage[str!]!)
-        }
         
         @IBAction func setMood(_ sender: UIButton) {
            if !Reachability.isConnectedToNetwork(){
@@ -150,44 +119,57 @@ class HomeVC: UIViewController {
                    m.backgroundColor = UIColor.white
                }
            }
-            updateDatabase()
         }
+    
+        @IBAction func activityButtonClk(_ sender: UIButton) {
+            if !Reachability.isConnectedToNetwork(){
+                displayReachabilityAlert()
+                return
+            }
+            if sender.backgroundColor == SELECTED{
+                sender.backgroundColor = NEUTRAL
+                selectedActivities.remove(actionsToStrings![sender]!)
+            }
+            else {
+                sender.backgroundColor = SELECTED
+                selectedActivities.insert(actionsToStrings![sender]!)
+            }
+        }
+    
         
-        func updateDatabase(){
+        func updateDailyLog(){
             let dailyInput = getDailyDocument()
             dailyInput.getDocument { (document, error) in
-                if let document = document {
-                    if document.exists{
-                       dailyInput.updateData(["mood": self.selectedMood])
-                    }
-                    else {
-                       dailyInput.setData(["mood": self.selectedMood,"activities": [String]()])
-                    }
+                if document!.exists {
+                    dailyInput.updateData(["mood": self.selectedMood,"activities": Array(self.selectedActivities)])
                 }
+                else {
+                    dailyInput.setData(["mood": self.selectedMood,"activities": Array(self.selectedActivities)])
+                }
+              }
             }
             
+    
+        func getProfileDocument() -> DocumentReference{
+            let db = Firestore.firestore()
+            let userID = Auth.auth().currentUser?.uid
+            let profileInput = db.collection(userID!).document("profile")
+            return(profileInput)
         }
-    
-    func getProfileDocument() -> DocumentReference{
-        let db = Firestore.firestore()
-        let userID = Auth.auth().currentUser?.uid
-        let profileInput = db.collection(userID!).document("profile")
-        return(profileInput)
-    }
-    
-    func getDailyDocument() -> DocumentReference{
-        let db = Firestore.firestore()
-        let userID = Auth.auth().currentUser?.uid
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let today = formatter.string(from: Date())
-        let dailyInput = db.collection(userID!).document(today)
-        return(dailyInput)
-    }
-    
-    func displayReachabilityAlert(){
-        let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert) //.actionSheet
-        alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert1, animated: true)
-    }
+        
+        func getDailyDocument() -> DocumentReference{
+            let db = Firestore.firestore()
+            let userID = Auth.auth().currentUser?.uid
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let today = formatter.string(from: Date())
+            let dailyInput = db.collection(userID!).document(today)
+            return(dailyInput)
+        }
+        
+        func displayReachabilityAlert(){
+            let alert1 = UIAlertController(title: "Network Connectivity", message: "Unable to connect to network", preferredStyle: .alert)
+            alert1.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert1, animated: true)
+        }
 }
