@@ -23,6 +23,7 @@ class DetailedMoodVC: UIViewController {
     @IBOutlet weak var actEight: UIImageView!
     @IBOutlet weak var actNine: UIImageView!
     
+    @IBOutlet weak var activitiesText: UITextView!
     var dateOfMood:String = ""
     let moods = ["lowest","low","middle","high","highest"]
     let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
@@ -33,6 +34,7 @@ class DetailedMoodVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activitiesText.text = NSLocalizedString("ACTIVITIES",comment:"")
         dateOfEntry.text = dateOfMood
         acts = [actOne,actTwo,actThree,actFour,actFive, actSeven,actEight,actNine]
         if !Reachability.isConnectedToNetwork(){

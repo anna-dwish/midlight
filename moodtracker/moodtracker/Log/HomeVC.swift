@@ -28,6 +28,7 @@ class HomeVC: UIViewController {
         @IBOutlet weak var nature: UIButton!
         @IBOutlet weak var journal: UIButton!
     
+
     
         let descToImage:[String:String] = ["Cooking/Baking":"cook","Reading":"read",
         "Playing with Pets":"pets","Creating art":"paint",
@@ -40,34 +41,46 @@ class HomeVC: UIViewController {
         var selectedActivities = Set<String>()
         var stringsToActions:[String:UIButton]? = nil
         var actionsToStrings:[UIButton:String]? = nil
-        var selectedMood = 1
+        var selectedMood = 2
         var receivedMoodInput = false
 
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            localizeActivityNames()
             moods = [moodOne,moodTwo,moodThree,moodFour,moodFive]
-            
             stringsToActions = ["Cooking/Baking":cook,"Reading":read,
                                 "Playing with Pets":pets,"Creating art":art,
                                 "Exercise":exercise,"Watching media":media,
                                 "Being in nature":nature,"Journaling":journal]
-            
             actionsToStrings = [cook:"Cooking/Baking",read:"Reading",
                                 pets:"Playing with Pets",art:"Creating art",
                                 exercise:"Exercise",media:"Watching media",
                                 nature:"Being in nature",journal:"Journaling"]
         }
     
+        func localizeActivityNames(){
+            cook.setTitle(NSLocalizedString("COOK",comment:""),for:.normal)
+            read.setTitle(NSLocalizedString("READ",comment:""),for:.normal)
+            pets.setTitle(NSLocalizedString("PETS",comment:""),for:.normal)
+            art.setTitle(NSLocalizedString("ART",comment:""),for:.normal)
+            exercise.setTitle(NSLocalizedString("EXERCISE",comment:""),for:.normal)
+            media.setTitle(NSLocalizedString("MEDIA",comment:""),for:.normal)
+            nature.setTitle(NSLocalizedString("NATURE",comment:""),for:.normal)
+            journal.setTitle(NSLocalizedString("JOURNAL",comment:""),for:.normal)
+        }
+    
         override func viewDidAppear(_ animated: Bool) {
-            enterDailyLog()
+            displayDailyLog()
         }
     
         override func viewDidDisappear(_ animated: Bool) {
-               updateDatabase()
+               updateDailyLog()
         }
     
-        func enterDailyLog() {
+        
+    
+        func displayDailyLog() {
             if !Reachability.isConnectedToNetwork(){
                 displayReachabilityAlert()
                 return
@@ -77,6 +90,7 @@ class HomeVC: UIViewController {
                 if let document = document, document.exists {
                     let selected = self.moods[document.data()!["mood"] as! Int]
                     selected.backgroundColor = self.SELECTED
+                    self.selectedMood = document.data()!["mood"] as! Int
                     if document.get("activities") != nil{
                         let loggedActivities = document.data()!["activities"] as! Array<String>
                         self.updateActivityDisplay(activities: loggedActivities)
@@ -123,10 +137,15 @@ class HomeVC: UIViewController {
         }
     
         
-        func updateDatabase(){
+        func updateDailyLog(){
             let dailyInput = getDailyDocument()
             dailyInput.getDocument { (document, error) in
-                dailyInput.setData(["mood": self.selectedMood,"activities": Array(self.selectedActivities)])
+                if document!.exists {
+                    dailyInput.updateData(["mood": self.selectedMood,"activities": Array(self.selectedActivities)])
+                }
+                else {
+                    dailyInput.setData(["mood": self.selectedMood,"activities": Array(self.selectedActivities)])
+                }
               }
             }
             

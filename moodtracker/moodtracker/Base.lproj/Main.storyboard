@@ -877,7 +877,7 @@
             </objects>
             <point key="canvasLocation" x="6703" y="138"/>
         </scene>
-        <!--Calendar-->
+        <!--CalendarVC-->
         <scene sceneID="BO2-Fd-cFC">
             <objects>
                 <viewController id="M3y-3p-zy5" customClass="CalendarVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -982,14 +982,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bxV-Zu-I4u"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="journalbook" id="dW4-dh-xEV"/>
+                    <tabBarItem key="tabBarItem" title="" image="calendarLarge" id="dW4-dh-xEV"/>
                     <connections>
                         <segue destination="c2L-NZ-UeK" kind="show" identifier="monthToDay" id="JdA-g8-Idd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvJ-26-qJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3305" y="2004"/>
+            <point key="canvasLocation" x="2562" y="2002"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="YpD-BK-AEk">
@@ -1306,9 +1306,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDR-0a-b4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092.753623188406" y="2002.9891304347827"/>
+            <point key="canvasLocation" x="4060" y="2791"/>
         </scene>
-        <!--Home-->
+        <!--HomeVC-->
         <scene sceneID="aQx-uH-d4r">
             <objects>
                 <viewController id="s9b-5f-wbE" customClass="HomeVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -1515,7 +1515,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pqq-3c-d7c"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="sdE-9L-bxp"/>
+                    <tabBarItem key="tabBarItem" title="" image="journalbook" id="sdE-9L-bxp"/>
                     <connections>
                         <outlet property="art" destination="T4E-Ob-Vax" id="bdL-PT-e0i"/>
                         <outlet property="cook" destination="BJL-qm-BEV" id="ksF-te-p1Z"/>
@@ -1534,9 +1534,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akQ-aO-dVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611.594202898551" y="2003.5714285714284"/>
+            <point key="canvasLocation" x="3279" y="2002"/>
         </scene>
-        <!--Profile-->
+        <!--ProfileVC-->
         <scene sceneID="ss6-Za-eQL">
             <objects>
                 <viewController id="OHP-57-6aE" customClass="ProfileVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -1554,7 +1554,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Average Mood:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTQ-FD-mKp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Average Mood" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTQ-FD-mKp">
                                 <rect key="frame" x="48" y="210.66666666666666" width="279" height="54.999999999999972"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -1710,7 +1710,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BkN-Ov-zME"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" id="vwD-Z5-tRv"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" id="vwD-Z5-tRv"/>
                     <navigationItem key="navigationItem" id="qSz-qe-n52"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -1722,12 +1722,14 @@
                         <outlet property="actSeven" destination="cqK-3Y-h0Q" id="kNb-h8-x9R"/>
                         <outlet property="actThree" destination="Yqj-lL-PvA" id="GpK-ZH-mu3"/>
                         <outlet property="actTwo" destination="eBH-gQ-9Nh" id="wQk-fG-SMK"/>
+                        <outlet property="averageMoodText" destination="fTQ-FD-mKp" id="pnw-eT-HKy"/>
                         <outlet property="displayName" destination="UhN-pF-rl3" id="ZU0-MV-ubc"/>
                         <outlet property="moodFive" destination="bdI-3H-btE" id="Tl5-ds-T01"/>
                         <outlet property="moodFour" destination="VRJ-sZ-i3O" id="G9Z-yD-NTG"/>
                         <outlet property="moodOne" destination="ZLR-Oa-Ccx" id="BIQ-lz-FTU"/>
                         <outlet property="moodThree" destination="wjl-JC-DgI" id="gts-6g-auy"/>
                         <outlet property="moodTwo" destination="CDu-mJ-jvb" id="nh0-UV-q54"/>
+                        <outlet property="newActsText" destination="ugl-CW-RbJ" id="lLP-lp-5SL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhf-PE-6br" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1750,190 +1752,14 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="IcH-0f-2lK" kind="relationship" relationship="viewControllers" id="uUL-S2-fZh"/>
-                        <segue destination="irn-vE-MH1" kind="relationship" relationship="viewControllers" id="HLX-Fu-n4Z"/>
-                        <segue destination="s9b-5f-wbE" kind="relationship" relationship="viewControllers" id="4M4-W2-Fdp"/>
                         <segue destination="M3y-3p-zy5" kind="relationship" relationship="viewControllers" id="Aav-b5-1Tu"/>
+                        <segue destination="s9b-5f-wbE" kind="relationship" relationship="viewControllers" id="4M4-W2-Fdp"/>
                         <segue destination="OHP-57-6aE" kind="relationship" relationship="viewControllers" id="noO-j6-1nw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4t-g9-ZZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3130" y="1049"/>
-        </scene>
-        <!--Title-->
-        <scene sceneID="fVL-5J-PBm">
-            <objects>
-                <viewController id="irn-vE-MH1" customClass="DailyActivitiesVC" customModule="moodtracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GEq-tr-hjJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="5Jb-pQ-ihM"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Journal" image="resources" id="er2-Uf-c9a"/>
-                    <navigationItem key="navigationItem" title="Title" id="GkQ-At-Ifc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xAS-yk-Qzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1861" y="2004"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Vv4-y3-R0Y">
-            <objects>
-                <viewController id="6XC-sO-c8T" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eoH-xZ-Lts">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Health Questions" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQ5-wr-fv8">
-                                <rect key="frame" x="68" y="103" width="279" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Are you hydrated?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNr-yb-Azt">
-                                <rect key="frame" x="20" y="150" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Have you eaten anything nutritious in the last 3 hours?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZZ-2K-3vx">
-                                <rect key="frame" x="20" y="331" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="If you haven't had much water today, please go and drink a glass right now." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHj-WQ-6FF">
-                                <rect key="frame" x="20" y="254" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="If you haven't eaten much today, please try eat a snack (some fruit, a granola bar) right now." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEM-iK-qfS">
-                                <rect key="frame" x="20" y="458" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please try to move and stretch your body now to improve blood flow." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLO-pe-thl">
-                                <rect key="frame" x="20" y="669" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExH-zW-5MP">
-                                <rect key="frame" x="44" y="192" width="136" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89833462239999995" green="0.83705943819999995" blue="0.93334573509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1E-MX-LjZ">
-                                <rect key="frame" x="239" y="191" width="136" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89833462239999995" green="0.83705943819999995" blue="0.93334573509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="No">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSs-Jc-EFk">
-                                <rect key="frame" x="239" y="395" width="136" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89833462239999995" green="0.83705943819999995" blue="0.93334573509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="No">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJY-WX-XDe">
-                                <rect key="frame" x="44" y="395" width="136" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89833462239999995" green="0.83705943819999995" blue="0.93334573509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Have you stretched and moved your body today?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mc-8h-TW2">
-                                <rect key="frame" x="20" y="535" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-5f-S43">
-                                <rect key="frame" x="44" y="612" width="136" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89833462239999995" green="0.83705943819999995" blue="0.93334573509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUb-zk-8x2">
-                                <rect key="frame" x="239" y="612" width="136" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89833462239999995" green="0.83705943819999995" blue="0.93334573509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="No">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x54-aM-o8x">
-                                <rect key="frame" x="139" y="746" width="137" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70196078429999997" green="0.64705882349999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="tyK-GQ-GBO"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="LSG-qP-EH6"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HZu-YA-Wrj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="875" y="3522"/>
-        </scene>
-        <!--Health-->
-        <scene sceneID="d2C-DP-BOL">
-            <objects>
-                <viewController id="a7G-qN-TX8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="199-ui-ohP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WE-WD-z05">
-                                <rect key="frame" x="53" y="112" width="308" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Ous-v1-Ysk"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Health" id="dXX-sC-8dz"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vw0-k3-43m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1648" y="3522"/>
         </scene>
         <!--Detailed MoodVC-->
         <scene sceneID="0nf-uc-1bU">
@@ -2066,25 +1892,26 @@
                         <outlet property="actSeven" destination="q4b-ML-MYK" id="IXz-r9-HXA"/>
                         <outlet property="actThree" destination="ER0-Fd-tu0" id="JK5-Lc-hsh"/>
                         <outlet property="actTwo" destination="Xt6-t3-nu8" id="dkf-RL-Pun"/>
+                        <outlet property="activitiesText" destination="vnX-e2-yjZ" id="SM4-OB-pvj"/>
                         <outlet property="dateOfEntry" destination="8R4-Lr-FTL" id="eUV-lL-FqQ"/>
                         <outlet property="mood" destination="3a3-FZ-D4t" id="XFb-IN-HXV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbr-kU-A86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3305" y="2712"/>
+            <point key="canvasLocation" x="2561" y="2791"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="sZH-Xb-MZB"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="calendarLarge" width="32" height="32"/>
         <image name="cook" width="40" height="40"/>
         <image name="draw" width="32" height="32"/>
         <image name="exercise" width="37.5" height="37.5"/>
         <image name="high" width="112.5" height="112.5"/>
         <image name="highest" width="112.5" height="112.5"/>
-        <image name="home" width="36" height="36"/>
         <image name="info" width="36" height="36"/>
         <image name="journalbook" width="32" height="32"/>
         <image name="lotus" width="1118" height="712"/>
@@ -2096,7 +1923,6 @@
         <image name="person" width="32" height="32"/>
         <image name="pets" width="32" height="32"/>
         <image name="read" width="32" height="32"/>
-        <image name="resources" width="36" height="36"/>
         <image name="tv" width="32" height="32"/>
     </resources>
 </document>
